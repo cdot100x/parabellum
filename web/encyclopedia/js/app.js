@@ -39,6 +39,25 @@
       .replace(/"/g, "&quot;");
   }
 
+  /** First paragraph = brief; remaining blocks under Overview. */
+  function dossierBriefHtml(text) {
+    const parts = String(text || "")
+      .trim()
+      .split(/\n\s*\n/)
+      .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
+      .filter(Boolean);
+    if (!parts.length) {
+      return `<p class="lore">No dossier text yet.</p>`;
+    }
+    const [lead, ...rest] = parts;
+    let html = `<p class="lore">${esc(lead)}</p>`;
+    if (rest.length) {
+      html += `<h3 class="lore-subhead">Overview</h3>`;
+      html += rest.map((p) => `<p class="lore">${esc(p)}</p>`).join("");
+    }
+    return html;
+  }
+
   function designation(a) {
     return (a.variant_code && a.variant_code.trim()) || a.display_name || a.id;
   }
@@ -1416,7 +1435,7 @@
           <div class="dossier-body">
             <section class="dossier-panel" data-dossier-panel="dossier">
               <h2>Operational brief</h2>
-              <p class="lore">${esc(a.description || "No dossier text yet.")}</p>
+              ${dossierBriefHtml(a.description)}
               ${a.irl_basis ? `<p class="lore lore-note"><strong>Design reference:</strong> ${esc(a.irl_basis)}</p>` : ""}
             </section>
             <section class="dossier-panel" data-dossier-panel="performance" hidden>
