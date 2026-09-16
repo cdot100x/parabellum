@@ -1307,12 +1307,43 @@
     return "Airbook entry";
   }
 
-  function statTile(label, body) {
+  function statTile(label, body, extraClass) {
+    const cls = extraClass ? ` stat-tile ${extraClass}` : "stat-tile";
     return `
-      <div class="stat-tile">
+      <div class="${cls.trim()}">
         <span class="stat-tile-label">${esc(label)}</span>
         <div class="stat-tile-body">${body}</div>
       </div>`;
+  }
+
+  function nationChip(nation, flag) {
+    if (flag) {
+      return `<span class="stat-operator"><img class="flag flag--tile" src="${esc(flag)}" alt="" /><span>${esc(nation || "—")}</span></span>`;
+    }
+    return `<span class="stat-operator"><span>${esc(nation || "—")}</span></span>`;
+  }
+
+  function operatorTileHtml(a) {
+    const primary = nationChip(a.nation || "—", a.flag || "");
+    const coops = Array.isArray(a.cooperated) ? a.cooperated.filter((c) => c && c.nation) : [];
+    if (!coops.length) {
+      return statTile("Operator", `<div class="stat-operator-wrap">${primary}</div>`);
+    }
+    const list = coops
+      .map((c) => `<li>${nationChip(c.nation, c.flag || "")}</li>`)
+      .join("");
+    const body = `
+      <div class="stat-operator-wrap">
+        ${primary}
+        <details class="stat-cooperated">
+          <summary>
+            <span class="stat-cooperated-label">Co-operated</span>
+            <span class="stat-cooperated-count">${coops.length}</span>
+          </summary>
+          <ul class="stat-cooperated-list">${list}</ul>
+        </details>
+      </div>`;
+    return statTile("Operator", body, "stat-tile--operator");
   }
 
   function performanceTable(a) {
@@ -1406,14 +1437,10 @@
       ? `<ul class="weapon-list">${a.starter_weapons.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>`
       : `<p class="lore">Starter loadout not listed in Airbook yet.</p>`;
 
-    const operatorBody = a.flag
-      ? `<img class="flag flag--tile" src="${esc(a.flag)}" alt="" /><span>${esc(a.nation || "—")}</span>`
-      : esc(a.nation || "—");
-
     const tiles = [
       statTile("Service tier", `<strong class="stat-big">${esc(a.tier || "—")}</strong>`),
       statTile("Domini era", `<strong class="stat-big stat-big--sm">${esc(a.era || "—")}</strong>`),
-      statTile("Operator", `<div class="stat-operator">${operatorBody}</div>`),
+      operatorTileHtml(a),
       statTile("Mission role", `<strong class="stat-big stat-big--sm">${esc(a.role || "—")}</strong>`),
       statTile("Potentiality", potentialityBar(a)),
       statTile("Registry status", `<strong class="stat-big stat-big--sm ${a.future_update ? "stat-future" : ""}">${esc(statusLabel(a))}</strong>`),

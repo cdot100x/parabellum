@@ -141,6 +141,106 @@ NUM_KEYS = {
 }
 BOOL_KEYS = {"future_update", "has_rwr", "has_maws"}
 
+# Encyclopedia-only co-development partners (shared programs). Primary nation stays on AircraftData.
+# Keys are shorthand matched against Domini country titles (case-insensitive substring / alias).
+COOPERATED: dict[str, list[str]] = {
+    "cy57m_harpyeagle": [
+        "Valorterra",
+        "Nakur-Yatshin",
+        "New Akron",
+        "Sumner",
+        "Baltimore",
+    ],
+    "fi22n_seahawk": [
+        "New Akron",
+        "Baltimore",
+        "Aurora",
+        "Sumner",
+        "Cyattersberg",
+    ],
+    "sai_s35a_trackhawk": [
+        "Qiyang",
+        "Tanayov",
+        "Baltimore",
+    ],
+    "hulienjiang_jf15dt_cao_kong_long": [
+        "Valorterra",
+        "Cyattersberg",
+        "Tanayov",
+        "Kashtanistan",
+    ],
+}
+
+# Nations named in co-op lists but not yet in Domini registry (no flag asset).
+NATION_FALLBACKS: dict[str, dict[str, str]] = {
+    "baltimore": {"nation": "Baltimore", "flag": ""},
+}
+
+
+def _domini_country_index(domini: dict) -> list[dict]:
+    rows: list[dict] = []
+    for cont in domini.get("continents") or []:
+        for country in cont.get("countries") or []:
+            title = str(country.get("title") or "").strip()
+            if not title:
+                continue
+            flag = str(country.get("flag") or "").strip()
+            rows.append({"nation": title, "flag": flag, "short": str(country.get("short") or "")})
+    return rows
+
+
+def _resolve_nation(token: str, catalog: list[dict]) -> dict:
+    raw = token.strip()
+    key = raw.casefold()
+    if key in NATION_FALLBACKS:
+        return dict(NATION_FALLBACKS[key])
+    # Exact title match first, then short code, then substring on title.
+    for row in catalog:
+        if row["nation"].casefold() == key:
+            return {"nation": row["nation"], "flag": row["flag"]}
+    for row in catalog:
+        short = row.get("short", "")
+        if short and short.casefold() == key:
+            return {"nation": row["nation"], "flag": row["flag"]}
+    hits = [row for row in catalog if key in row["nation"].casefold()]
+    if len(hits) == 1:
+        return {"nation": hits[0]["nation"], "flag": hits[0]["flag"]}
+    if hits:
+        # Prefer the shortest title containing the token (e.g. "Aurora" → Aurora Union).
+        hits.sort(key=lambda r: len(r["nation"]))
+        return {"nation": hits[0]["nation"], "flag": hits[0]["flag"]}
+    return {"nation": raw, "flag": ""}
+
+
+def _attach_cooperated(aircraft: list[dict], domini: dict) -> None:
+    catalog = _domini_country_index(domini)
+    MEDIA_FLAGS.mkdir(parents=True, exist_ok=True)
+    for a in aircraft:
+        tokens = COOPERATED.get(a["id"]) or []
+        rows: list[dict] = []
+        seen: set[str] = set()
+        primary = str(a.get("nation") or "").casefold()
+        for token in tokens:
+            resolved = _resolve_nation(token, catalog)
+            name = resolved["nation"]
+            name_key = name.casefold()
+            if not name or name_key in seen or name_key == primary:
+                continue
+            seen.add(name_key)
+            flag = resolved.get("flag") or ""
+            # Domini load may already rewrite to media/flags/; otherwise copy from assets.
+            if flag and not flag.startswith("media/"):
+                src = NATIONS_DIR / flag
+                if src.is_file():
+                    shutil.copy2(src, MEDIA_FLAGS / flag)
+                    flag = f"media/flags/{flag}"
+                elif (MEDIA_FLAGS / Path(flag).name).is_file():
+                    flag = f"media/flags/{Path(flag).name}"
+                else:
+                    flag = ""
+            rows.append({"nation": name, "flag": flag})
+        a["cooperated"] = rows
+
 
 def parse_tres(path: Path) -> dict:
     text = path.read_text(encoding="utf-8", errors="replace")
@@ -366,6 +466,7 @@ def main() -> None:
     n_cards, n_flags = _copy_media(aircraft)
     campaigns, n_campaign_art = _load_campaigns()
     domini, n_domini_flags = _load_domini()
+    _attach_cooperated(aircraft, domini)
     news, n_news_art = _load_news()
     has_domini_map, domini_map_info, globe_map_size = _copy_domini_map()
     payload = {
