@@ -1,0 +1,123 @@
+{
+  "campaigns": [
+    {
+      "id": "second_transcontinental",
+      "title": "Second Transcontinental War",
+      "years": "1937–1949",
+      "art": "",
+      "desc": "The great continental war that reshaped Domini. Massed armor, early jets, and shattered borders — placeholder briefing.",
+      "playable": false
+    },
+    {
+      "id": "folkistan_coup",
+      "title": "Folkistan Coup D'Etat",
+      "years": "1981–1983",
+      "art": "",
+      "desc": "A palace coup in Folkistan spills into proxy fights across the strait. Covert sorties and political strikes — locked.",
+      "playable": false
+    },
+    {
+      "id": "bassada_zanzarbaria",
+      "title": "Bassada-Zanzarbaria War",
+      "years": "1982–1983",
+      "art": "",
+      "desc": "Two neighboring powers clash over trade corridors and desert oil routes. Fast campaigns, brutal ceasefires — locked.",
+      "playable": false
+    },
+    {
+      "id": "east_renian",
+      "title": "East Renian Conflict",
+      "years": "1988–1992",
+      "art": "",
+      "desc": "Insurgency and counter-insurgency across East Renia's mountain belts. Rotary-wing war at treeline — locked.",
+      "playable": false
+    },
+    {
+      "id": "third_transcontinental",
+      "title": "Third Transcontinental War",
+      "years": "1995–2003",
+      "art": "",
+      "desc": "Another transcontinental cycle: coalition air power, SEAD, and multi-domain fronts from ocean to steppe — locked.",
+      "playable": false
+    },
+    {
+      "id": "ogbin",
+      "title": "Ogbin War",
+      "years": "1999–2001",
+      "art": "",
+      "desc": "Jungle basin fighting over river chokepoints. Mud, monsoon, and close air support with nowhere to land — locked.",
+      "playable": false
+    },
+    {
+      "id": "jaguran_desert",
+      "title": "Jaguran Desert War",
+      "years": "2002–2011",
+      "art": "jaguran_desert.png",
+      "desc": "Long desert war of outposts and convoys. Sand, heat shimmer, and strike packages at dusk — locked.",
+      "playable": false
+    },
+    {
+      "id": "qiyah_spring",
+      "title": "Qiyah Spring",
+      "years": "2012",
+      "art": "qiyah_spring.png",
+      "desc": "Uprisings ripple through Qiyah cities. Air patrols, no-fly enforcement, and brittle truces — locked.",
+      "playable": false
+    },
+    {
+      "id": "merihena_islands",
+      "title": "Merihena Islands Conflict",
+      "years": "2013",
+      "art": "central_qiyah.png",
+      "desc": "Amphibious grabs and island-hopping over disputed atolls. Naval aviation and contested beachheads — locked.",
+      "playable": false
+    },
+    {
+      "id": "second_east_renia",
+      "title": "Second East Renia War",
+      "years": "2014–2022",
+      "art": "campaign_placeholder_b.png",
+      "desc": "East Renia reignites with modern SAM belts and drone spotters. Mountain passes become kill boxes — locked.",
+      "playable": false
+    },
+    {
+      "id": "central_qiyah",
+      "title": "Central Qiyah War",
+      "years": "2019–2022",
+      "art": "central_qiyah.png",
+      "desc": "On February 28th 2019, the Federal Republic Of Chihebere (CHE) declared war against the Ngozi Democratic Republic (NDR), Republic Of The Ngozi (RTN), Federation Of Bassada (BDA), Southern Republic Of Zanzarbaria (SRZ), Kiheza Peoples Democratic Republic (KPDR), and the Federal Republic Of Kszadzie (KZD). Chihebere has long faced ruin and desperation to save its country against economic fallout and restore its claimed \"promised lands\" that once stored rare earths after those countries' independence around the 80s to 90s.",
+      "playable": true,
+      "missions": [
+        { "id": "consequences", "index": 1, "date": "2019-03-12", "title": "Consequences", "location": "Central Qiyah — Desert Grid", "brief": "Destroy the enemy AI Data Centers, the O-80 Devil's Tower, and Koridor K1 CAP fighters." },
+        { "id": "on_the_hunt_1", "index": 2, "date": "2019-03-28", "title": "On the Hunt Part 1", "location": "Central Qiyah — Inland Pursuit", "brief": "Open the hunt. Track high-value movers across the inland grid before the trail goes cold." },
+        { "id": "wild_card", "index": 3, "date": "2019-04-19", "title": "Wild Card", "location": "Central Qiyah — Contested Sector", "brief": "A fluid sortie with shifting tasking. Adapt mid-flight when the package brief stops matching the sky." },
+        { "id": "barabara_kuu_ya_kuzimu", "index": 4, "date": "2019-06-07", "title": "Barabara kuu ya Kuzimu", "location": "Central Qiyah — Highway Corridor", "brief": "Strike and deny along the highway of hell — armor, logistics, and whatever is stupid enough to stay on the road." },
+        { "id": "siege_of_bjameni", "index": 5, "date": "2019-08-22", "title": "Siege of Bjameni", "location": "Central Qiyah — Bjameni", "brief": "Siege ops over Bjameni." },
+        { "id": "game_six", "index": 6, "date": "2019-11-14", "title": "Game Six", "location": "Central Qiyah — Forward Line", "brief": "High-tempo package work on a night when everything that can go wrong stacks at once." },
+        { "id": "headless", "index": 7, "date": "2020-03-03", "title": "Headless", "location": "Central Qiyah — Canal Approaches", "brief": "Prequel to Deathless. Soften the canal approaches." },
+        { "id": "deathless", "index": 8, "date": "2020-03-11", "title": "Deathless", "location": "Central Qiyah — Canal Mouth", "brief": "Hangar jet of your choice. Escort a B-70 Ram with F-16SM3s while allied S-21 Deathless (incl. BVR flight), Cy-30, J/A-11, and mass J/I-8Bs hit a fleeing carrier screened by destroyers — Cy-47 / Cy-30 / K-1 / Shachi / UH-1 opposition." },
+        { "id": "aerodrome", "index": 9, "date": "2020-05-29", "title": "Aerodrome", "location": "Central Qiyah — Enemy Aerodrome", "brief": "SOF-styled aerodrome hit." },
+        { "id": "air_raid", "index": 10, "date": "2020-08-08", "title": "Air Raid", "location": "Central Qiyah — Strategic Skies", "brief": "Intercept inbound ballistic fire — IRBM through ICBM class threats before they reach friendly ground." },
+        { "id": "bonde_la_kuchinja", "index": 11, "date": "2021-01-16", "title": "Bonde la kuchinja", "location": "Central Qiyah — Slaughter Valley", "brief": "Force a corridor through slaughter valley. Dense AAA, short windows, no clean egress." },
+        { "id": "defense_lines", "index": 12, "date": "2021-04-04", "title": "Defense Lines", "location": "Central Qiyah — Forward Defenses", "brief": "Crack or hold successive defense belts before the front collapses one way or the other." },
+        { "id": "combat_search_rescue_destroy", "index": 13, "date": "2021-06-21", "title": "Combat, Search, Rescue, Destroy", "location": "Central Qiyah — CSAR Grid", "brief": "Pull friendlies out of the fire, then burn whatever tried to keep them. CSAR with teeth." },
+        { "id": "on_the_hunt_2", "index": 14, "date": "2021-09-09", "title": "On the Hunt Part 2", "location": "Central Qiyah — Leadership Trail", "brief": "Sequel to On the Hunt Part 1. Finish the trail — hunt the leader." },
+        { "id": "capturing_enzelafanzi", "index": 15, "date": "2021-12-02", "title": "Capturing Enzelafanzi", "location": "Central Qiyah — Enzelafanzi", "brief": "Take the capital. Air cover and strike for the ground push into Enzelafanzi." },
+        { "id": "painting_pictures", "index": 16, "date": "2022-02-18", "title": "Painting Pictures", "location": "Svatchomo Sea — Contested Littoral", "brief": "High-risk reconnaissance near the contested Svatchomo Sea. Get the pictures. Come home with the jet." },
+        { "id": "dark_hours", "index": 17, "date": "2022-05-07", "title": "Dark Hours", "location": "Central Qiyah — Night Sector", "brief": "Night package under blackout conditions. Sensors and discipline over raw speed." },
+        { "id": "deadline", "index": 18, "date": "2022-07-22", "title": "Deadline", "location": "Central Qiyah — Time-Critical Strike", "brief": "A clock is running. Hit the target set before the window closes for good." },
+        { "id": "nyanda_sita", "index": 19, "date": "2022-09-14", "title": "Nyanda Sita", "location": "Central Qiyah — Nyanda Sita", "brief": "Contest the Nyanda Sita sector. Hold air and deny the enemy the plain." },
+        { "id": "overlord", "index": 20, "date": "2022-11-03", "title": "Overlord", "location": "Central Qiyah — Combined Push", "brief": "Large combined push. Escort, SEAD, and strike stacked into one long day of air war." },
+        { "id": "checkmate", "index": 21, "date": "2022-12-19", "title": "Checkmate", "location": "Central Qiyah — Endgame", "brief": "Close the Central Qiyah war. Final package — no rematch if this one breaks." }
+      ]
+    },
+    {
+      "id": "menacing_fork",
+      "title": "Operation Menacing Fork",
+      "years": "2022–present",
+      "art": "operation_menacing_fork.png",
+      "desc": "Coalition intervention against San Mortigo/Peronesia. Night raids, carrier ops, and an open-ended fork — locked.",
+      "playable": false
+    }
+  ]
+}

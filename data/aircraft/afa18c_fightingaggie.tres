@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/afa18c_fightingaggie.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/afa18c_fightingaggie.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "afa18c_fightingaggie"
+display_name = "AF/A-18C Fighting Aggie"
+role = "Multirole"
+nation = "New Akron Federation"
+description = "Mcallister Gray multirole — Aggie dirt mobility energy, not a navy princess. Solid bar, flexible loadouts."
+era = "Multirole Era"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely F/A-18C class"
+variant_code = "AF/A-18C"
+max_speed_kmh = 1915
+mach_max = 1.8
+combat_radius_km = 740
+service_ceiling_m = 15000
+empty_weight_kg = 10400
+thrust_kn = 156.0
+hardpoints = 9
+crew = 1
+upgrade_modules = [{
+"desc": "New Akron carrier AESA face for Fighting Aggie multimode air and sea search.",
+"id": "aesa_afa18c_aggie_apg",
+"locked": true,
+"name": "AESA — Aggie APG Face",
+"slot": "Sensors"
+}, {
+"desc": "Salt-sealed DIRCM turret rated for cat-shot vibration and spray.",
+"id": "dircm_afa18c_deck",
+"locked": true,
+"name": "DIRCM Deck-Edge Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "Naval ESM suite that tags ship radars and coastal SAMs during Aggie CAP.",
+"id": "esm_afa18c_bluewater",
+"locked": true,
+"name": "ESM Bluewater Listener",
+"slot": "EW"
+}, {
+"desc": "Lawrence-spec corrosion wash and fastener kit for long carrier deployments.",
+"id": "nav_afa18c_corrosion",
+"locked": true,
+"name": "Naval Corrosion Kit C",
+"slot": "Naval"
+}, {
+"desc": "Expanded weapons bus for anti-ship and land-attack stores on the Aggie.",
+"id": "wpn_afa18c_harpoon",
+"locked": true,
+"name": "Harpoon/A2G Bus Expand",
+"slot": "Weapons Bus"
+}, {
+"desc": "Fleet datalink so Fighting Aggies share tracks with the battle group.",
+"id": "lnk_afa18c_cag",
+"locked": true,
+"name": "CAG Fleet Datalink",
+"slot": "Datalink"
+}]

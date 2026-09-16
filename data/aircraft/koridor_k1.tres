@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/koridor_k1_preview.png" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/koridor_k1.tscn" id="3"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_sazkhokia.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/koridor_k1.png" id="5"]
+
+[resource]
+script = ExtResource("1")
+id = "koridor_k1"
+display_name = "Koridor K1"
+role = "Starter / Reserve Trainer"
+nation = "Republic of Sazkhokia"
+description = "Sazkhokian lead-in jet for new pilots. Cheap, forgiving, light fangs. Small upgrade potentiality — learn Domini here before the bloodlines."
+era = "Lead-In"
+tier = "Newbie"
+potentiality_filled = 1
+potentiality_max = 5
+preview = ExtResource("2")
+card_image = ExtResource("5")
+flag = ExtResource("4")
+model_scene = ExtResource("3")
+irl_basis = "Placeholder — loosely L-39 class"
+variant_code = "K1"
+max_speed_kmh = 750
+mach_max = 0.8
+combat_radius_km = 700
+service_ceiling_m = 11000
+empty_weight_kg = 3455
+thrust_kn = 16.9
+hardpoints = 4
+crew = 2
+radar_range_m = 3500.0
+has_rwr = true
+has_maws = false
+upgrade_modules = [{
+"desc": "Sazkhokian lead-in AESA retrofit so student radar scopes finally paint beyond ground clutter.",
+"id": "aesa_koridor_k1_classroom",
+"locked": true,
+"name": "AESA Retrofit — K1 Classroom Face",
+"slot": "Sensors"
+}, {
+"desc": "Single-head DIRCM for range days — teaches missile flares before real warheads arrive.",
+"id": "dircm_koridor_k1_tutor",
+"locked": true,
+"name": "DIRCM Tutor Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "Lite ESM that flags emitters so new pilots learn threat libraries without frying the bus.",
+"id": "esm_koridor_k1_primer",
+"locked": true,
+"name": "ESM Primer Suite",
+"slot": "EW"
+}, {
+"desc": "Koridor soft g-limiter that keeps rookies from departing the jet in a hammerhead.",
+"id": "fcs_koridor_k1_forgiving",
+"locked": true,
+"name": "Forgiving FCS Soft-Limiter",
+"slot": "Flight Controls"
+}, {
+"desc": "Inlet screens for dry Sazkhokian strips — keeps the trainer spooling after sandstorm landings.",
+"id": "eng_koridor_k1_dust",
+"locked": true,
+"name": "Dust-Ingest Filter Kit",
+"slot": "Engine"
+}, {
+"desc": "Modern glass overlay on analog gauges so Domini syllabus matches frontline MFDs.",
+"id": "hud_koridor_k1_glass",
+"locked": true,
+"name": "Glass Cockpit Trainer Bus",
+"slot": "Avionics"
+}]

@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_empire_of_sotomi_states.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/yosuga_ahs66_shachi.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/yosuga_ahs66_shachi.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "yosuga_ahs66_shachi"
+display_name = "Yosuga AHS-66 Shachi"
+role = "Scout Helicopter"
+nation = "Empire of Sotomi States"
+description = "Yosuga (Kawasaki-line) scout. Empire eyes over the islands. (Source model CC-BY-NC — replace before commercial ship.)"
+category = "helicopter"
+manufacturer = "Yosuga"
+era = "Modern"
+tier = "Regular"
+potentiality_filled = 3
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "OH-1 Ninja"
+max_speed_kmh = 278
+mach_max = 0.0
+combat_radius_km = 200
+service_ceiling_m = 3500
+empty_weight_kg = 2000
+thrust_kn = 0.0
+hardpoints = 2
+crew = 2
+upgrade_modules = [{
+"desc": "Yosuga scout AESA mast for AHS-66 Shachi low-observable peeks.",
+"id": "aesa_shachi_scout",
+"locked": true,
+"name": "AESA — Shachi Scout Mast",
+"slot": "Sensors"
+}, {
+"desc": "Low-signature DIRCM turret for Sotomi scout ops.",
+"id": "dircm_shachi_quiet",
+"locked": true,
+"name": "DIRCM Quiet Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "Whisper ESM for detecting emitters without lighting the Shachi.",
+"id": "esm_shachi_scout",
+"locked": true,
+"name": "ESM Scout Whisper Suite",
+"slot": "EW"
+}, {
+"desc": "RAM tape kit for rotor hub and mast edges on the AHS-66.",
+"id": "ram_shachi_rotor",
+"locked": true,
+"name": "Scout RAM Tape Kit",
+"slot": "Stealth"
+}, {
+"desc": "Mast multi-sensor ball for Shachi scout-and-designate work.",
+"id": "mms_shachi_ball",
+"locked": true,
+"name": "Mast MMS Ball",
+"slot": "Sensors Extra"
+}, {
+"desc": "Low-probability datalink for feeding tracks to Sotomi shooters.",
+"id": "lnk_shachi_silent",
+"locked": true,
+"name": "Silent Scout Link",
+"slot": "Datalink"
+}]

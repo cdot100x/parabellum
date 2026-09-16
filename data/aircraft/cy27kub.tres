@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_union_nakur_yatshin.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy27kub.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy27kub"
+display_name = "Cykovskiy Cy-27KUB 182nd START"
+role = "Strike Experimental"
+nation = "Union of Nakur-Yatshin States"
+description = "Cykovskiy Cy-27KUB — 182nd Special Teams Aircraft Replenishment Unit (182nd START). Side-by-side strike experimental owned by the Union of Nakur-Yatshin States to prototype their strike fighter line. Fitted with N011M Bars-M PESA, SPO-150 / L-150 ESM/EW, and Kursk Low-light 720p Retractable Pod."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Multirole Era"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-27KUB / Su-33UB side-by-side naval prototype"
+max_speed_kmh = 2300
+mach_max = 2.17
+combat_radius_km = 1000
+service_ceiling_m = 17500
+empty_weight_kg = 18500
+thrust_kn = 245.0
+hardpoints = 12
+crew = 2
+radar_range_m = 14000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy27"
+variant_code = "Cy-27KUB"
+starter_weapons = PackedStringArray("2× R-73E", "2× R-77A", "2× S-8 Rocket Pods (dual-racked)", "2× Kh-29T", "GSh-30-1 ×295")
+upgrade_modules = [{
+"desc": "N011M Bars-M PESA — strike cueing and lookdown for the 182nd START Cy-27KUB.",
+"id": "radar_cy27kub_n011m_bars_m",
+"locked": false,
+"name": "N011M Bars-M PESA",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150 / L-150 ESM/EW suite — spectrum warning and soft-kill for experimental strike work.",
+"id": "ew_cy27kub_spo150_l150",
+"locked": false,
+"name": "SPO-150 / L-150 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "Kursk Low-light 720p Retractable Pod — night/low-vis strike optics for START prototyping.",
+"id": "pod_cy27kub_kursk_ll720",
+"locked": false,
+"name": "Kursk LL 720p Retractable Pod",
+"slot": "Sensors"
+}, {
+"desc": "Starter A2A/A2G: 2× R-73E, 2× R-77A, 2× S-8 dual-rack pods, 2× Kh-29T.",
+"id": "wpn_cy27kub_starter",
+"locked": false,
+"name": "Starter — R-73E / R-77A / S-8 / Kh-29T",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×295 rounds (Domini load).",
+"id": "gun_cy27kub_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×295",
+"slot": "Gun"
+}, {
+"desc": "182nd START experimental pack — folding-wing naval prototype seals for Nakur-Yatshin strike trials.",
+"id": "exp_cy27kub_182_start",
+"locked": true,
+"name": "182nd START Experimental Pack",
+"slot": "Naval"
+}]

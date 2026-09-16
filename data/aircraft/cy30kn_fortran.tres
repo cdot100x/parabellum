@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_sazkhokia.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy30kn_fortran.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy30kn_fortran"
+display_name = "Cy-30KN FORTRAN [1984]"
+role = "Medium Strike"
+nation = "Republic of Sazkhokia"
+description = "Cykovskiy Cy-30KN FORTRAN (Forerunner Technology Attack Configuration) — 1984 export package. Sazkhokia's first top-tier jet: tandem two-seat medium strike with N011M.a2 Bars and SPO-150 / L-150 ESM/EW. The forerunner that put Domini export Flankers on the map."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Multirole Era"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-30 export / 1980s Flanker-C forerunner"
+max_speed_kmh = 2120
+mach_max = 2.0
+combat_radius_km = 1050
+service_ceiling_m = 17300
+empty_weight_kg = 17700
+thrust_kn = 245.0
+hardpoints = 12
+crew = 2
+radar_range_m = 12000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy30"
+variant_code = "Cy-30KN [1984]"
+starter_weapons = PackedStringArray("2× R-73C", "2× R-77A", "GSh-30-1 ×295")
+upgrade_modules = [{
+"desc": "N011M.a2 Bars PESA — 1984 export lookdown for FORTRAN medium strike.",
+"id": "radar_cy30kn_n011m_a2_bars",
+"locked": false,
+"name": "N011M.a2 Bars Radar",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150 / L-150 ESM/EW — spectrum warning for Sazkhokian export packages.",
+"id": "ew_cy30kn_spo150_l150",
+"locked": false,
+"name": "SPO-150 / L-150 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "Starter A2A: 2× R-73C + 2× R-77A on the Cy-30KN hardpoint map.",
+"id": "wpn_cy30kn_starter_a2a",
+"locked": false,
+"name": "Starter — 2× R-73C / 2× R-77A",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×295 rounds (Domini load).",
+"id": "gun_cy30kn_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×295",
+"slot": "Gun"
+}, {
+"desc": "FORTRAN export pack — Sazkhokia's first top-tier Flanker syllabus kit.",
+"id": "exp_cy30kn_fortran_1984",
+"locked": true,
+"name": "FORTRAN 1984 Export Pack",
+"slot": "Avionics"
+}]

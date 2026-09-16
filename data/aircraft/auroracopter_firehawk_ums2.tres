@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_commonwealth_of_cyattersberg.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/auroracopter_firehawk_ums2.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/auroracopter_firehawk_ums2.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "auroracopter_firehawk_ums2"
+display_name = "Auroracopter Firehawk UMS 2"
+role = "Attack Helicopter (Export)"
+nation = "Commonwealth of Cyattersberg"
+description = "Export Firehawk for Cyattersberg. Successor to the Aurora Union Auroracopter — same airframe language, local UMS-2 kit."
+category = "helicopter"
+manufacturer = "Auroracopter"
+era = "Modern"
+tier = "Regular"
+potentiality_filled = 3
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "Eurocopter Tiger / HAP export variant"
+max_speed_kmh = 300
+mach_max = 0.0
+combat_radius_km = 750
+service_ceiling_m = 4000
+empty_weight_kg = 3300
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "Modern AESA mast for Cyattersberg Firehawk UMS 2 export gunships.",
+"id": "aesa_firehawk_ums2",
+"locked": true,
+"name": "AESA — Firehawk UMS2 Mast",
+"slot": "Sensors"
+}, {
+"desc": "Export-spec dual DIRCM for Firehawk UMS 2 self-protect.",
+"id": "dircm_firehawk_export",
+"locked": true,
+"name": "DIRCM Export Dual Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "UMS ESM suite covering modern MANPADS seekers and AAA radars.",
+"id": "esm_firehawk_ums",
+"locked": true,
+"name": "ESM UMS Spectrum Suite",
+"slot": "EW"
+}, {
+"desc": "Fire-control bus for modern ATGMs on Firehawk stubs.",
+"id": "wpn_firehawk_atgm",
+"locked": true,
+"name": "ATGM Fire-Control Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "MAWS ring cueing auto-flare and DIRCM on the UMS 2.",
+"id": "maws_firehawk_ring",
+"locked": true,
+"name": "Firehawk MAWS Ring",
+"slot": "MAWS"
+}, {
+"desc": "CAS package datalink for Cyattersberg joint fires.",
+"id": "lnk_firehawk_cas",
+"locked": true,
+"name": "CAS Package Datalink",
+"slot": "Datalink"
+}]

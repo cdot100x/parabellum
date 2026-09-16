@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/chiqiangi_ji8b.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/chiqiangi_ji8b.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "chiqiangi_ji8b"
+display_name = "Chiqiangi J/I-8B"
+role = "Interceptor"
+nation = "Federal Republic of Qiyang"
+description = "Chiqiangi interceptor for Qiyang borders. Lean, climb-hungry, modest upgrade bar."
+era = "Cold War"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely J-8II class"
+variant_code = "J/I-8B"
+max_speed_kmh = 2300
+mach_max = 2.2
+combat_radius_km = 800
+service_ceiling_m = 20000
+empty_weight_kg = 9820
+thrust_kn = 130.0
+hardpoints = 7
+crew = 1
+upgrade_modules = [{
+"desc": "Early AESA retrofit for cold-war Chiqiangi interceptor noses.",
+"id": "aesa_ji8b_retro",
+"locked": true,
+"name": "AESA Retrofit — J/I-8B Face",
+"slot": "Sensors"
+}, {
+"desc": "Bolt-on DIRCM head for J/I-8B that never had modern IRCM.",
+"id": "dircm_ji8b_qiyang",
+"locked": true,
+"name": "DIRCM Qiyang Retro Head",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM that still eats analog pulse radars common to legacy Qiyang foes.",
+"id": "esm_ji8b_cold",
+"locked": true,
+"name": "ESM Cold-War Listener",
+"slot": "EW"
+}, {
+"desc": "Climb-trim engine pack for high-altitude J/I-8B scrambles.",
+"id": "eng_ji8b_climb",
+"locked": true,
+"name": "Interceptor Climb Trim",
+"slot": "Engine"
+}, {
+"desc": "Bus sync so refurbished AAMs talk to the old Chiqiangi fire-control.",
+"id": "wpn_ji8b_missile",
+"locked": true,
+"name": "Legacy Missile Bus Sync",
+"slot": "Weapons Bus"
+}, {
+"desc": "Glass HUD overlay for pilots who still grew up on gunsights.",
+"id": "avi_ji8b_hud",
+"locked": true,
+"name": "HUD Glass Overlay",
+"slot": "Avionics"
+}]

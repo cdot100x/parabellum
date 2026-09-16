@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Encyclopedia · Parabellum Universe</title>
+  <meta name="application-name" content="encyclopedia.parabellumuniverse.com" />
+  <link rel="canonical" href="https://encyclopedia.parabellumuniverse.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/encyclopedia.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#/" data-nav="home">
+      <img class="brand-logo" src="media/logo/parabellum-logo.png" alt="Parabellum" width="220" height="48" />
+      <span class="brand-sub">encyclopedia.parabellumuniverse.com</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <button type="button" class="nav-btn is-active" data-section="aircraft">Fixed-wing</button>
+      <button type="button" class="nav-btn" data-section="heli">Rotary</button>
+      <button type="button" class="nav-btn" data-section="special">Special</button>
+      <button type="button" class="nav-btn" data-section="domini">Domini</button>
+      <button type="button" class="nav-btn" data-section="campaigns">Campaigns</button>
+      <button type="button" class="nav-btn" data-section="news">News</button>
+    </nav>
+    <div class="top-tools">
+      <label class="units-toggle" title="Unit system">
+        <span>Units</span>
+        <select id="unitsSelect" aria-label="Unit system">
+          <option value="us">US</option>
+          <option value="intl">International</option>
+        </select>
+      </label>
+      <input id="searchInput" class="search" type="search" placeholder="Search designation, nation…" autocomplete="off" />
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-foot">
+    <p><a href="https://encyclopedia.parabellumuniverse.com/">encyclopedia.parabellumuniverse.com</a> · Domini airframe registry · Airbook <code>AircraftData</code></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

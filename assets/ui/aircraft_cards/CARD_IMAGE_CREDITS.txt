@@ -1,0 +1,22 @@
+Parabellum aircraft card images — Wikimedia Commons sources
+Downloaded via Special:FilePath; cropped to 512x288 center cover.
+User-Agent: ParabellumCardBot/1.0
+Verify license on each Commons file page before commercial redistribution.
+
+luther_uh1sm1_rat.png ← UH-1Y_Venom.jpg
+luther_ah1w_redhawk.png ← AH-1W Super Cobra assigned to HMLA 167.jpg
+doren_ah64d_ranger.png ← AH-64D_Apache_Longbow.jpg
+lawrence_mh60_dap.png ← UH-60_Black_Hawk.jpg
+lawrence_sh60_orca.png ← SH-60B_Seahawk.jpg
+lawrence_ch53_podarge.png ← Sikorsky CH-53E Super Stallion USMC 165503 FDK MD1.jpg
+lawrence_mh60x_stealth_predator.png ← Sikorsky S-70i (Polish Police, SN-71XP).jpg
+doren_lawrence_rah66m_longhorn.png ← Rah-66 c. 2000.jpg
+auroracopter.png ← German Army Eurocopter EC 665 Tiger UHT 98-18 5.jpg
+auroracopter_firehawk_ums2.png ← German Army Eurocopter EC 665 Tiger UHT 98-18 5.jpg (same as auroracopter)
+vikhr_vk24e_vympel.png ← Mil_Mi-24.jpg
+koralev_kr60_topaz.png ← NASA spacecraft comparison.jpg
+yosuga_ahs66_shachi.png ← JGSDF OH-1 (32634) in Camp Yao.jpg
+kac_kf12_tarpan.png ← Black Panther JF-17.jpg
+dtc_f16sm3.png ← General_Dynamics_F-16_Fighting_Falcon.jpg
+hulienjiang_jf10s.png ← Chengdu J-10 - 殲-10.jpg
+joost_fj40.png ← Saab JAS-39 Gripen of the Czech Air Force taking off from AFB Čáslav.jpg

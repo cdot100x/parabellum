@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/lawrence_sh60_orca.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/lawrence_sh60_orca.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "lawrence_sh60_orca"
+display_name = "Lawrence SH-60 Orca"
+role = "Naval ASW / Utility"
+nation = "New Akron Federation"
+description = "Shipboard Orca. ASW and SAR over blue water."
+category = "helicopter"
+manufacturer = "Lawrence"
+era = "Late Cold War"
+tier = "Regular"
+potentiality_filled = 3
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "SH-60B Seahawk"
+max_speed_kmh = 270
+mach_max = 0.0
+combat_radius_km = 450
+service_ceiling_m = 5800
+empty_weight_kg = 6190
+thrust_kn = 0.0
+hardpoints = 3
+crew = 3
+upgrade_modules = [{
+"desc": "Lawrence AESA for SH-60 Orca surface and low-altitude search.",
+"id": "aesa_sh60_orca",
+"locked": true,
+"name": "AESA — Orca Surface Search",
+"slot": "Sensors"
+}, {
+"desc": "Salt-rated DIRCM turret for Orca deck ops.",
+"id": "dircm_sh60_orca",
+"locked": true,
+"name": "DIRCM Orca Salt Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM ear for surface search radars during ASW patrols.",
+"id": "esm_sh60_asw",
+"locked": true,
+"name": "ESM ASW Emitter Ear",
+"slot": "EW"
+}, {
+"desc": "Lawrence naval corrosion kit for long blue-water SH-60 tours.",
+"id": "nav_sh60_corrosion",
+"locked": true,
+"name": "Naval Corrosion Kit Orca",
+"slot": "Naval"
+}, {
+"desc": "Dipping sonar modem upgrade for Orca submarine hunts.",
+"id": "son_sh60_dipping",
+"locked": true,
+"name": "Dipping Sonar Modem",
+"slot": "Sonar"
+}, {
+"desc": "Fleet ASW datalink sharing contacts with the battle group.",
+"id": "lnk_sh60_fleet",
+"locked": true,
+"name": "Fleet ASW Datalink",
+"slot": "Datalink"
+}]

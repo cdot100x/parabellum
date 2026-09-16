@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/hulienjiang_jf10s.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/hulienjiang_jf10s.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "hulienjiang_jf10s"
+display_name = "Hulienjiang JF-10S"
+role = "Multirole"
+nation = "Federal Republic of Qiyang"
+description = "Hulienjiang canard multirole for Qiyang — twin-seat trainer-combat JF-10S. Agile, modern avionics, mid-bar potentiality."
+manufacturer = "Hulienjiang"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely J-10S class"
+lineage_family = "hulienjiang_jf10"
+variant_code = "JF-10S"
+max_speed_kmh = 2320
+mach_max = 2.0
+combat_radius_km = 900
+service_ceiling_m = 18000
+empty_weight_kg = 9750
+thrust_kn = 125.0
+hardpoints = 11
+crew = 2
+radar_range_m = 10500.0
+has_rwr = true
+has_maws = true
+upgrade_modules = [{
+"desc": "Full AESA face for Hulienjiang JF-10S canard multimode fights.",
+"id": "aesa_hulienjiang_kl_10",
+"locked": true,
+"name": "AESA — KL-10 Lookdown",
+"slot": "Sensors"
+}, {
+"desc": "Paired DIRCM turrets for JF-10S when hunting low over Qiyang plains.",
+"id": "dircm_jf10s_qiyang",
+"locked": true,
+"name": "DIRCM KL Turret Pair",
+"slot": "Self-Protect"
+}, {
+"desc": "Hulienjiang ESM suite covering fighter and SAM bands.",
+"id": "esm_jf10s_kl",
+"locked": true,
+"name": "ESM KL Spectrum Suite",
+"slot": "EW"
+}, {
+"desc": "FCS tuned for JF-10S canard authority in mixed loadouts.",
+"id": "fcs_jf10s_canard",
+"locked": true,
+"name": "Canard Multirole FCS",
+"slot": "FCS"
+}, {
+"desc": "Dual-mode bus for A2A and precision A2G on the same sortie.",
+"id": "wpn_jf10s_dual",
+"locked": true,
+"name": "Dual-Mode Weapons Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Platoon datalink for Hulienjiang four-ship packages.",
+"id": "lnk_jf10s_platoon",
+"locked": true,
+"name": "Qiyang Platoon Link",
+"slot": "Datalink"
+}]

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/joost_fj40.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_empire_nickel_territories.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/joost_fj40.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "joost_fj40"
+display_name = "Joost FJ-40"
+role = "Multirole / Light Fighter"
+nation = "Empire of the Nickel Territories"
+description = "Joost light multirole for Nickel skies — Gripen-bloodline lean fighter. Cheap to sortie, sharp sensors, solid upgrade bar."
+manufacturer = "Joost"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely JAS 39 Gripen class"
+variant_code = "FJ-40"
+max_speed_kmh = 2200
+mach_max = 2.0
+combat_radius_km = 800
+service_ceiling_m = 15240
+empty_weight_kg = 6800
+thrust_kn = 80.0
+hardpoints = 8
+crew = 1
+radar_range_m = 11000.0
+has_rwr = true
+has_maws = true
+upgrade_modules = [{
+"desc": "Lightweight Joost AESA for FJ-40 multirole light fighters.",
+"id": "aesa_fj40_joost",
+"locked": true,
+"name": "AESA — FJ-40 Light Face",
+"slot": "Sensors"
+}, {
+"desc": "Weight-conscious DIRCM turret for the FJ-40 airframe.",
+"id": "dircm_fj40_light",
+"locked": true,
+"name": "DIRCM Light Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM pack built for Nickel Territories threat tapes.",
+"id": "esm_fj40_nickel",
+"locked": true,
+"name": "ESM Nickel Territories Pack",
+"slot": "EW"
+}, {
+"desc": "Spool map favoring climb and turn for Joost light fighters.",
+"id": "eng_fj40_light",
+"locked": true,
+"name": "Light-Fighter Spool Map",
+"slot": "Engine"
+}, {
+"desc": "Modular stores bus for rapid FJ-40 mission re-role.",
+"id": "wpn_fj40_modular",
+"locked": true,
+"name": "Modular Stores Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Ring MAWS sensors cueing break turns on the FJ-40.",
+"id": "maws_fj40_ring",
+"locked": true,
+"name": "MAWS Ring Sensors",
+"slot": "MAWS"
+}]

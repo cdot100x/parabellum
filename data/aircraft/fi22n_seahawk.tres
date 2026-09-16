@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_valorterra.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/fi22n_seahawk.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "fi22n_seahawk"
+display_name = "F/I-22N Seahawk"
+role = "Naval Stealth Strike"
+nation = "Federal Republic of Valorterra"
+description = "Valorterran naval twin-seat stealth — F/I-22N Seahawk. Carrier-capable low-observable strike fighter. Fitted with MR/TRS-27A Xanadu AESA, MR/ARS-55AX RWR, and CITDS (Compatible-Integrated Tactical Defense Suite) EW/ESM."
+category = "fixed_wing"
+manufacturer = "Valorterra"
+era = "Apex"
+tier = "Apex"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — navalized twin-seat F-22 / NGAD-class stealth concept"
+max_speed_kmh = 2410
+mach_max = 2.25
+combat_radius_km = 1200
+service_ceiling_m = 19800
+empty_weight_kg = 19800
+thrust_kn = 312.0
+hardpoints = 8
+crew = 2
+radar_range_m = 20000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "valorterra_fi22"
+variant_code = "F/I-22N"
+starter_weapons = PackedStringArray("2× RP-10X Angeleye (IR / IIR / ARH)", "2× RP-4C ARMS (ARH / IOG / DL / GNSS / EICCM — HOJ/RGPO)", "Prittkin G34 ×595")
+upgrade_modules = [{
+"desc": "MR/TRS-27A Xanadu AESA — LPI naval lookdown and strike cueing for Seahawk.",
+"id": "radar_fi22n_mr_trs27a_xanadu",
+"locked": false,
+"name": "MR/TRS-27A Xanadu AESA",
+"slot": "Sensors"
+}, {
+"desc": "MR/ARS-55AX radar warning receiver — Valorterran naval threat library.",
+"id": "rwr_fi22n_mr_ars55ax",
+"locked": false,
+"name": "MR/ARS-55AX RWR",
+"slot": "Self-Protect"
+}, {
+"desc": "CITDS — Compatible-Integrated Tactical Defense Suite EW/ESM for contested carrier packages.",
+"id": "ew_fi22n_citds",
+"locked": false,
+"name": "CITDS EW/ESM",
+"slot": "EW"
+}, {
+"desc": "Starter A2A: 2× RP-10X Angeleye multimode seekers (IR / IIR / ARH).",
+"id": "wpn_fi22n_angeleye",
+"locked": false,
+"name": "Starter — 2× RP-10X Angeleye",
+"slot": "Weapons Bus"
+}, {
+"desc": "Starter A2A: 2× RP-4C ARMS with ARH/IOG/DL/GNSS and EICCM HOJ/RGPO support.",
+"id": "wpn_fi22n_arms",
+"locked": false,
+"name": "Starter — 2× RP-4C ARMS",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Prittkin G34 cannon — ×595 rounds (Domini Valorterran load).",
+"id": "gun_fi22n_prittkin_g34",
+"locked": false,
+"name": "Prittkin G34 ×595",
+"slot": "Gun"
+}]

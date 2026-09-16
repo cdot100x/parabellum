@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cy30c_byk.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy30c_byk.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy30c_byk"
+display_name = "Cy-30C Block 21 Byk"
+role = "Multirole Flanker"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy bull — Block 21 Flanker-C bloodline. Reliable multirole with mid-high potentiality."
+era = "Multirole Era"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Su-30 class"
+lineage_family = "cykovskiy_cy30"
+variant_code = "Cy-30C"
+max_speed_kmh = 2120
+mach_max = 2.0
+combat_radius_km = 1500
+service_ceiling_m = 17300
+empty_weight_kg = 17700
+thrust_kn = 246.0
+hardpoints = 12
+crew = 2
+upgrade_modules = [{
+"desc": "Cykovskiy AESA upgrade for Cy-30C Block 21 multimode work.",
+"id": "aesa_cy30_byk",
+"locked": true,
+"name": "AESA — Byk Block 21 Face",
+"slot": "Sensors"
+}, {
+"desc": "Shoulder DIRCM pair for Byk when loaded dirty with strike stores.",
+"id": "dircm_cy30_bull",
+"locked": true,
+"name": "DIRCM Bull Shoulder Pair",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM suite bridging legacy Cy-30 threat tapes to modern libraries.",
+"id": "esm_cy30_flanker",
+"locked": true,
+"name": "ESM Flanker Legacy Suite",
+"slot": "EW"
+}, {
+"desc": "Stores bus for mixed A2A and A2G on the Byk without brownouts.",
+"id": "wpn_cy30_multirole",
+"locked": true,
+"name": "Multirole Stores Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Thrust bump kit keeping Block 21 Byk competitive in verticals.",
+"id": "eng_cy30_al31",
+"locked": true,
+"name": "AL-Class Thrust Bump",
+"slot": "Engine"
+}, {
+"desc": "IRST refresh for silent flanker-style tracking.",
+"id": "irst_cy30_ols",
+"locked": true,
+"name": "OLS-30 IRST Refresh",
+"slot": "IRST"
+}]

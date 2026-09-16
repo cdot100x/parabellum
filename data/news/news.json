@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": "encyclopedia_live",
+      "date": "2026.03.15",
+      "category": "news",
+      "title": "Domini Encyclopedia goes live",
+      "excerpt": "encyclopedia.parabellumuniverse.com is online — airframes, campaigns, world atlas, and this news feed.",
+      "body": "The Parabellum Universe registry is now public. Browse fixed-wing and rotary Airbook entries, campaign dossiers, the Domini world atlas, and lore drops right here.\n\nMore nations, flags, and the 10,000 × 10,000 world map texture are on the way. If you catch a typo in Chihebere's war dates, that's probably intentional. Probably.",
+      "art": "campaign_placeholder.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "chihebere_promised_lands",
+      "date": "2026.02.28",
+      "category": "lore",
+      "title": "Chihebere's \"promised lands\" — a field guide",
+      "excerpt": "Why CHE declared war on half of Central Qiyah in a single afternoon.",
+      "body": "On February 28th 2019, the Federal Republic Of Chihebere declared war against NDR, RTN, BDA, SRZ, KPDR, and KZD.\n\nOfficial CHE rhetoric calls them the \"promised lands\" — rare-earth belts Chihebere controlled before the independence wave of the 80s–90s. Economic ruin after the partition left CHE desperate enough to gamble on a continental war.\n\nAllied pilots know the shorthand: if the brief mentions rare earths, expect long-range strike and someone yelling about Enzelafanzi.",
+      "art": "central_qiyah.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "central_qiyah_playable",
+      "date": "2026.01.10",
+      "category": "game",
+      "title": "Central Qiyah War — mission registry unlocked",
+      "excerpt": "Twenty-one operations from Consequences to Checkmate are listed in the campaign encyclopedia.",
+      "body": "The Central Qiyah War is the first fully indexed conflict in the encyclopedia — 21 missions from the 2019 desert grid strikes through the 2022 Enzelafanzi push.\n\nHighlights include Deathless over the canal mouth, Air Raid ballistic intercepts, and Checkmate as the endgame package. Hangar selection and playable status follow the main game build — the wiki lists what's canon either way.",
+      "art": "central_qiyah.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "qiyah_spring_2012",
+      "date": "2026.03.08",
+      "category": "event",
+      "title": "Qiyah Spring — fourteen years on",
+      "excerpt": "Maristania urban uprisings, no-fly enforcement, and the truces that didn't hold.",
+      "body": "March 2012: uprisings ripple through Qiyang cities during the Qiyah Spring. Air patrols enforce brittle no-fly zones while ground factions test how far they can push before someone launches a Koridor CAP.\n\nHistorians argue whether Spring was prelude to Chihebere's 2019 gamble or a separate fault line. Pilots argue about which city had the worst SAM belt. Both are correct.",
+      "art": "qiyah_spring.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "east_renia_treeline",
+      "date": "2025.11.03",
+      "category": "lore",
+      "title": "East Renia — rotary war at treeline",
+      "excerpt": "Mountain passes, drone spotters, and why the Second East Renia War stays locked in the archives.",
+      "body": "East Renia's mountain belts turn every sortie into a treeline problem — AH-64s and Firehawks hug ridges while modern SAM belts and drone spotters turn passes into kill boxes.\n\nAringelka's 455th SOR and Lakeya's RRA rangers show up in the infantry registry; the air story is still mostly classified in-universe. Encyclopedia entry stays locked until the campaign branch opens.",
+      "art": "campaign_placeholder_b.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "airbook_variant_codes",
+      "date": "2025.12.01",
+      "category": "game",
+      "title": "Airbook tree cards now show designations",
+      "excerpt": "Short variant codes on tech-tree cards; full names stay in the dossier popup.",
+      "body": "Hangar Airbook update: tech-tree cards display short designations (F-16SM3, J/A-11, Cy-30C, etc.) without ellipsis truncation. Open the dossier for the full airframe name, stat tiles, and bloodline variants.\n\nFlag icons on variant tabs match operator nations. If your favorite weirdo experimental still says \"Future Update,\" it's probably the XB100.",
+      "art": "campaign_placeholder_c.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "menacing_fork_teaser",
+      "date": "2026.04.01",
+      "category": "event",
+      "title": "Operation Menacing Fork — coalition fork",
+      "excerpt": "San Mortigo / Peronesia intervention. Night raids, carrier ops, open end.",
+      "body": "Operation Menacing Fork: coalition intervention against San Mortigo and Peronesia. Night raids, carrier ops, and an open-ended fork — currently locked in the campaign registry.\n\nBriefings mention San Mortigo airspace and Peronesia littorals. Exact order of battle is still being declassified by whoever lost the spreadsheet.",
+      "art": "operation_menacing_fork.png",
+      "art_source": "campaign"
+    },
+    {
+      "id": "aurora_deathless_canal",
+      "date": "2020.03.11",
+      "category": "lore",
+      "title": "Deathless over the canal — after-action rumor mill",
+      "excerpt": "S-21 strike package, fleeing carrier group, and why Valorterra won't confirm the tally.",
+      "body": "March 11th 2020: allied S-21 Deathless strike elements hit a fleeing carrier group screened by destroyers during Central Qiyah spillover ops. Valorterra registry lists the platform; the after-action tally is… disputed.\n\nEscort packages included F-16SM3s, Cy-30, J/A-11, and mass J/I-8B sorties. Opposition called in Cy-47, Cy-30, K-1, Shachi, and UH-1 assets. If you were there, you don't talk about it. If you weren't, you talk anyway.",
+      "art": "merihena_islands.png",
+      "art_source": "campaign"
+    }
+  ]
+}

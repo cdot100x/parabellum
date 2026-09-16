@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/hulienjiang_jf10de_long_tudi.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "hulienjiang_jf10de_long_tudi"
+display_name = "Hulienjiang JF-10DE 龙徒弟"
+role = "Strike/EW/ESM"
+nation = "Federal Republic of Qiyang"
+description = "Hulienjiang JF-10S successor — 龙徒弟 (Long Tudi / Dragon Disciple). Twin-seat canard-delta strike package with centerline EW/ESM pod. FUTURE UPDATE — 3D model in progress."
+category = "fixed_wing"
+manufacturer = "Hulienjiang"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — J-10DE / twin-seat canard strike-EW class"
+max_speed_kmh = 2280
+mach_max = 2.0
+combat_radius_km = 950
+service_ceiling_m = 17500
+empty_weight_kg = 10200
+thrust_kn = 132.0
+hardpoints = 11
+crew = 2
+radar_range_m = 11500.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "hulienjiang_jf10"
+variant_code = "JF-10DE"
+upgrade_modules = [{
+"desc": "AESA tuned for lookdown strike corridors and SEAD cues.",
+"id": "aesa_jf10de_strike",
+"locked": true,
+"name": "AESA — Strike Lookdown",
+"slot": "Sensors"
+}, {
+"desc": "Centerline wideband ESM/ELINT pod — Dragon Disciple mission core.",
+"id": "esm_jf10de_disciple",
+"locked": true,
+"name": "ESM Dragon Disciple Pod",
+"slot": "EW"
+}, {
+"desc": "Pylon jammer suite for package escort on deep strike.",
+"id": "ew_jf10de_pods",
+"locked": true,
+"name": "Strike EW Pod Suite",
+"slot": "EW"
+}, {
+"desc": "Canard FCS bias for heavy A2G and podded EW loads.",
+"id": "fcs_jf10de_strike",
+"locked": true,
+"name": "Strike Canard FCS",
+"slot": "FCS"
+}]

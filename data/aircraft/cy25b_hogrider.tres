@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cy25b_hogrider.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy25b_hogrider.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy25b_hogrider"
+display_name = "Cy-25B Hogrider"
+role = "Attack / CAS"
+nation = "Democratic Republic of Tanayov"
+description = "Frogfoot bloodline for Domini dirt strips. Tanky, loud, mean on armor. Mid potentiality bar — Cykovskiy workhorse."
+era = "Cold War"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Su-25 class"
+variant_code = "Cy-25B"
+max_speed_kmh = 950
+mach_max = 0.82
+combat_radius_km = 750
+service_ceiling_m = 7000
+empty_weight_kg = 9800
+thrust_kn = 88.2
+hardpoints = 10
+crew = 1
+upgrade_modules = [{
+"desc": "Tanayov CAS AESA tuned for slow mud movers and SPAAG trucks under tree lines.",
+"id": "aesa_cy25b_hogsnout",
+"locked": true,
+"name": "AESA — Hogsnout Lookdown",
+"slot": "Sensors"
+}, {
+"desc": "Paired belly DIRCM heads covering MANPADS arcs during nap-of-earth runs.",
+"id": "dircm_cy25b_twin",
+"locked": true,
+"name": "DIRCM Twin Hog Eyes",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM that prioritizes AAA fire-control bands common over Tanayov front trenches.",
+"id": "esm_cy25b_shrapnel",
+"locked": true,
+"name": "ESM Shrapnel Ear",
+"slot": "EW"
+}, {
+"desc": "Extra bathtub plating around the Cy-25B seat — classic Hogrider survivability bump.",
+"id": "arm_cy25b_bathtub",
+"locked": true,
+"name": "Titanium Bathtub Upscale",
+"slot": "Armor"
+}, {
+"desc": "Hardpoint bus sync for dual gun pods without cooking the generators.",
+"id": "wpn_cy25b_gunpod",
+"locked": true,
+"name": "Gun-Pod Firebus Sync",
+"slot": "Weapons Bus"
+}, {
+"desc": "Cascade FOD screens for dirt strips where Hogrider lives between missions.",
+"id": "eng_cy25b_fod",
+"locked": true,
+"name": "FOD Screen Cascade",
+"slot": "Engine"
+}]

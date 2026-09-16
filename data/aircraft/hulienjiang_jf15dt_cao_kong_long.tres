@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/hulienjiang_jf15dt_cao_kong_long.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "hulienjiang_jf15dt_cao_kong_long"
+display_name = "Hulienjiang JF-15DT 操控龙"
+role = "Naval ESM/EW Multirole"
+nation = "Federal Republic of Qiyang"
+description = "Hulienjiang naval twin-seat ESM/EW multirole — 操控龙 (Cao Kong Long). Canard Flanker-family airframe with wingtip and pylon EW pods. FUTURE UPDATE — 3D model in progress."
+category = "fixed_wing"
+manufacturer = "Hulienjiang"
+era = "Modern"
+tier = "Apex"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — J-15DT / naval Flanker EW class"
+max_speed_kmh = 2490
+mach_max = 2.2
+combat_radius_km = 1100
+service_ceiling_m = 17500
+empty_weight_kg = 17500
+thrust_kn = 245.0
+hardpoints = 12
+crew = 2
+radar_range_m = 14000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "hulienjiang_jf15"
+variant_code = "JF-15DT"
+upgrade_modules = [{
+"desc": "Naval AESA tuned for sea clutter and group air picture.",
+"id": "aesa_jf15dt_naval",
+"locked": true,
+"name": "AESA — Naval Lookdown",
+"slot": "Sensors"
+}, {
+"desc": "Wideband ESM/ELINT suite — the 操控龙 mission core.",
+"id": "esm_jf15dt_spectrum",
+"locked": true,
+"name": "ESM Spectrum Dragon",
+"slot": "EW"
+}, {
+"desc": "Wingtip and pylon jammer pods for strike package escort.",
+"id": "ew_jf15dt_pods",
+"locked": true,
+"name": "EW Pod Suite",
+"slot": "EW"
+}, {
+"desc": "Carrier / STOBAR approach FCS with canard authority.",
+"id": "fcs_jf15dt_naval",
+"locked": true,
+"name": "Naval Canard FCS",
+"slot": "FCS"
+}]

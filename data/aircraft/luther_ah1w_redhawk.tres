@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federation_of_sumner.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/luther_ah1w_redhawk.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/luther_ah1w_redhawk.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "luther_ah1w_redhawk"
+display_name = "Luther AH-1W Redhawk"
+role = "Attack Helicopter"
+nation = "Federation of Sumner"
+description = "Sumner gunship. Twin-blade sting from Luther Bell works."
+category = "helicopter"
+manufacturer = "Luther"
+era = "Cold War"
+tier = "Regular"
+potentiality_filled = 3
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "AH-1W SuperCobra"
+max_speed_kmh = 280
+mach_max = 0.0
+combat_radius_km = 250
+service_ceiling_m = 3700
+empty_weight_kg = 4635
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "Luther AESA mast for AH-1W Redhawk attack helicopters.",
+"id": "aesa_ah1w_redhawk",
+"locked": true,
+"name": "AESA — Redhawk Mast Face",
+"slot": "Sensors"
+}, {
+"desc": "Twin DIRCM covering stub-wing blind arcs on the Redhawk.",
+"id": "dircm_ah1w_hawk",
+"locked": true,
+"name": "DIRCM Redhawk Twin",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM pack for Sumner Federation threat libraries.",
+"id": "esm_ah1w_sumner",
+"locked": true,
+"name": "ESM Sumner Threat Pack",
+"slot": "EW"
+}, {
+"desc": "Stub-wing bus for guided missiles on the AH-1W.",
+"id": "wpn_ah1w_stub",
+"locked": true,
+"name": "Stub-Wing Hellfire Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "TADS and PNVS refresh for Redhawk night attack.",
+"id": "tads_ah1w",
+"locked": true,
+"name": "TADS/PNVS Refresh",
+"slot": "Sensors Extra"
+}, {
+"desc": "Twin-engine power map for hot-day Redhawk hover.",
+"id": "eng_ah1w_twin",
+"locked": true,
+"name": "Twin-Pack Power Map",
+"slot": "Engine"
+}]

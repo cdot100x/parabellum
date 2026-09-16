@@ -1,0 +1,507 @@
+{
+  "world": {
+    "name": "Domini",
+    "map_size": 10000,
+    "texture_size": [20000, 10000],
+    "overview": "The shared fictional world of Parabellum — twelve continental regions, dozens of sovereign states, and a century of air war across Akron, Qiyah, Renia, and the polar belts."
+  },
+  "continents": [
+    {
+      "id": "north_akron",
+      "title": "North Akron",
+      "summary": "Industrial heartland of the Akron supercontinent. NAF, Valorterra, Cyattersberg, Sumner, and Tanayov — carrier aviation, Flanker/Trackhawk/Deathless programs, heavy bombers, and the firms that supply half of IEF and BLIC air power.",
+      "map_region": { "x": 0.28, "y": 0.12, "w": 0.24, "h": 0.22 },
+      "countries": [
+        {
+          "id": "naf",
+          "title": "New Akron Federation",
+          "short": "NAF",
+          "faction": "IEF",
+          "flag": "flag_new_akron_federation.png",
+          "desc": "Dominant North Akron power. Operates F-16SM3, F/A-18C, B-70 Ram, and the bulk of IEF rotary-wing exports."
+        },
+        {
+          "id": "valorterra",
+          "title": "Federal Republic of Valorterra",
+          "short": "VLT",
+          "faction": "IEF",
+          "flag": "flag_federal_republic_valorterra.png",
+          "desc": "North Akron aerospace hub. SAI S-35A Trackhawk, S-21A Deathless, and Fi-22N Seahawk programs."
+        },
+        {
+          "id": "cyattersberg",
+          "title": "Commonwealth of Cyattersberg",
+          "short": "CYB",
+          "faction": "IEF",
+          "flag": "flag_commonwealth_of_cyattersberg.png",
+          "desc": "North Akron union member. Firehawk UMS2 attack helicopter exports and maritime patrol."
+        },
+        {
+          "id": "sumner",
+          "title": "Federation of Sumner",
+          "short": "SUM",
+          "faction": "IEF",
+          "flag": "flag_federation_of_sumner.png",
+          "desc": "Atlantic-facing Akron partner. Cold War attack-helicopter lineage and coastal defense aviation."
+        },
+        {
+          "id": "tanayov",
+          "title": "Democratic Republic of Tanayov",
+          "short": "TNV",
+          "faction": "BLIC",
+          "flag": "flag_democratic_republic_tanayov.png",
+          "desc": "North Akron heavyweight. Su-27/30/35/47 family operator — O-80 Devil's Tower and Harpyeagle programs."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 1947,
+          "date": "09.12",
+          "title": "Akron Accords",
+          "text": "North Akron states formalize mutual defense and shared air corridors after the Second Transcontinental War."
+        },
+        {
+          "year": 1989,
+          "date": "06.03",
+          "title": "Carrier modernisation",
+          "text": "NAF commits to a fourth-generation carrier wing — the Fighting Aggie and Falcon-bloodline fighters enter service planning."
+        },
+        {
+          "year": 1998,
+          "date": "01.30",
+          "title": "Aurora charter signatories",
+          "text": "Valorterra and Cyattersberg — North Akron members — join allied cantons in signing the Aurora Union charter for shared airworthiness codes."
+        },
+        {
+          "year": 2020,
+          "date": "03.11",
+          "title": "Deathless over the canal",
+          "text": "Valorterra S-21 Deathless strike package hits a fleeing carrier group during Central Qiyah spillover operations."
+        },
+        {
+          "year": 2019,
+          "date": "03.12",
+          "title": "Devil's Tower strikes",
+          "text": "Allied sorties hit Tanayov AI data centers during the Central Qiyah War spillover — O-80 platforms contested over the desert grid."
+        }
+      ]
+    },
+    {
+      "id": "central_akron",
+      "title": "Central Akron",
+      "summary": "Dense manufacturing belt between North and South Akron. Trans-Akron rail corridors and smelter cities — ENT industry now registered under Aurora.",
+      "map_region": { "x": 0.32, "y": 0.34, "w": 0.2, "h": 0.18 },
+      "countries": [],
+      "timeline": [
+        {
+          "year": 1962,
+          "date": "11.08",
+          "title": "Nickel charter",
+          "text": "ENT consolidates smelter cities into a single imperial jurisdiction — later reassigned to the Aurora registry while ore routes stay central."
+        }
+      ]
+    },
+    {
+      "id": "cibadian",
+      "title": "Cibadian",
+      "summary": "Eastern steppe and taiga — geographic heart of the old Cibadian air bloc. Legacy regiments now assigned to North Akron and Aurora; sovereign registry expanding.",
+      "map_region": { "x": 0.58, "y": 0.18, "w": 0.28, "h": 0.26 },
+      "countries": [],
+      "timeline": [
+        {
+          "year": 1991,
+          "date": "12.26",
+          "title": "Cibadian dissolution",
+          "text": "The old Cibadian union fractures — Tanayov folds into North Akron, Nakur-Yatshin and Sazkhokia into the Aurora rim."
+        }
+      ]
+    },
+    {
+      "id": "south_akron",
+      "title": "South Akron",
+      "summary": "Sub-tropical Akron tail — trade ports, littoral SAM networks, and buffer states between Central Akron industry and the Tafriqiyah isthmus.",
+      "map_region": { "x": 0.3, "y": 0.52, "w": 0.22, "h": 0.2 },
+      "countries": [
+        {
+          "id": "south_akron_buffer",
+          "title": "South Akron Treaty States",
+          "short": "SATS",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Loose confederation of port republics — registry entry reserved for future South Akron campaigns."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 2003,
+          "date": "07.14",
+          "title": "Littoral no-fly zones",
+          "text": "South Akron ports enforce ADIZ extensions after Qiyah Spring unrest ripples north through the isthmus."
+        }
+      ]
+    },
+    {
+      "id": "tafriqiyah",
+      "title": "Tafriqiyah",
+      "summary": "Central Qiyah and western Tafriqiyah — Ngozi to Chihebere, plus Aringelka, Lakeya, and Cdelba. Rare-earth disputes and the 2019–2022 continental conflict.",
+      "map_region": { "x": 0.38, "y": 0.58, "w": 0.24, "h": 0.28 },
+      "countries": [
+        {
+          "id": "ndr",
+          "title": "Ngozi Democratic Republic",
+          "short": "NDR",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Central Qiyah IEF anchor. URES and CDN FSN special operations — T-80U spearheads on the ground."
+        },
+        {
+          "id": "rtn",
+          "title": "Republic Of The Ngozi",
+          "short": "RTN",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Sister republic to NDR. BML mechanized brigades and contested air corridors over the inland grid."
+        },
+        {
+          "id": "bda",
+          "title": "Federation Of Bassada",
+          "short": "BDA",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Federal artillery and special forces power. Bassada-Zanzarbaria War veteran — Thunder Line M777/M270 fires."
+        },
+        {
+          "id": "srz",
+          "title": "Southern Republic Of Zanzarbaria",
+          "short": "SRZ",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Southern Qiyah coastal republic. Locked in recurring border wars with Bassada over channel trade."
+        },
+        {
+          "id": "kpdr",
+          "title": "Kiheza Peoples Democratic Republic",
+          "short": "KPDR",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Mountain republic. CRU special forces and high-altitude air defense belts."
+        },
+        {
+          "id": "kzd",
+          "title": "Federal Republic Of Kszadzie",
+          "short": "KZD",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Northern Qiyah federated republic — allied to IEF during the Central Qiyah War."
+        },
+        {
+          "id": "raheza",
+          "title": "Federal Republic Of Raheza",
+          "short": "RAHEZA",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Haze-3 special operations and Main Rouge heavy rocket artillery — Archer/BM-30 class fires."
+        },
+        {
+          "id": "che",
+          "title": "Federal Republic Of Chihebere",
+          "short": "CHE",
+          "faction": "NPF",
+          "flag": "",
+          "desc": "Aggressor of the Central Qiyah War (Feb 2019). NPF-aligned — seeks restoration of pre-independence rare-earth claims."
+        },
+        {
+          "id": "ampem",
+          "title": "Federal Republic Of Ampem",
+          "short": "AMPEM",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "ASGS special forces. Western Tafriqiyah partner — coastal patrol aviation."
+        },
+        {
+          "id": "hakerissa",
+          "title": "Republic Of Hakerissa",
+          "short": "HKR",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Sahel-facing republic. 39th Para and desert airlift corridors."
+        },
+        {
+          "id": "smarena",
+          "title": "Federal Republic Of Smarena",
+          "short": "SMR",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "1732e UOS special operations. Eastern Tafriqiyah federated partner."
+        },
+        {
+          "id": "aringelka",
+          "title": "Federal Republic Of Aringelka",
+          "short": "ARK",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Western Tafriqiyah. DOSA and 455th SOR special operations — alpine warfare and counter-insurgency aviation."
+        },
+        {
+          "id": "lakeya",
+          "title": "United Provinces Of Lakeya",
+          "short": "LKY",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Western Tafriqiyah. RRA ranger regiments and lake plateau air corridors."
+        },
+        {
+          "id": "cdelba",
+          "title": "Cdelba Islands",
+          "short": "CDB",
+          "faction": "IEF",
+          "flag": "",
+          "desc": "Tafriqiyah archipelago. 2e UDEC marine special forces — island defense aviation."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 1994,
+          "date": "10.03",
+          "title": "Western Tafriqiyah insurgency",
+          "text": "Aringelka and Lakeya mountain belts erupt into counter-insurgency air war — rotary-wing combat at treeline becomes the norm."
+        },
+        {
+          "year": 2015,
+          "date": "06.18",
+          "title": "Second Tafriqiyah highlands war",
+          "text": "Modern SAM belts and drone spotters turn Aringelka passes into kill boxes — conflict locked in archives."
+        },
+        {
+          "year": 1987,
+          "date": "04.22",
+          "title": "Independence wave",
+          "text": "Qiyah states break from colonial mandates — rare-earth belts partitioned between Chihebere and the southern republics."
+        },
+        {
+          "year": 2019,
+          "date": "02.28",
+          "title": "Chihebere declaration",
+          "text": "CHE declares war on NDR, RTN, BDA, SRZ, KPDR, and KZD — opening the Central Qiyah War."
+        },
+        {
+          "year": 2022,
+          "date": "12.19",
+          "title": "Checkmate",
+          "text": "Final allied air package over Enzelafanzi closes the Central Qiyah War — no rematch if the sortie breaks."
+        }
+      ]
+    },
+    {
+      "id": "socorchis",
+      "title": "Socorchis",
+      "summary": "Island arc on Domini's eastern rim — geographic Socorchis belt. Sotomi is registered under East Renia; sovereign registry expanding.",
+      "map_region": { "x": 0.78, "y": 0.42, "w": 0.16, "h": 0.22 },
+      "countries": [],
+      "timeline": [
+        {
+          "year": 1975,
+          "date": "08.01",
+          "title": "Imperial consolidation",
+          "text": "Sotomi merges the eastern isles under a single naval-air empire — later classified under East Renia in the Domini registry."
+        }
+      ]
+    },
+    {
+      "id": "atakprim",
+      "title": "Atakprim",
+      "summary": "Southern continental plateau — geographic Atakprim belt. Kashtanistan is registered under Southeast Renia; sovereign registry expanding.",
+      "map_region": { "x": 0.48, "y": 0.72, "w": 0.2, "h": 0.18 },
+      "countries": [],
+      "timeline": [
+        {
+          "year": 2008,
+          "date": "05.17",
+          "title": "Plateau rearmament",
+          "text": "Kashtanistan fields first Tarpan squadron — later reclassified under Southeast Renia in the Domini registry."
+        }
+      ]
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora / Aurorenia",
+      "summary": "Northwestern oceanic union — Aurora Union, Nickel Territories, Nakur-Yatshin, and Sazkhokia. Joost interceptors, Koridor fighters, Wishbone ESM, and Tiger-class rotary doctrine.",
+      "map_region": { "x": 0.06, "y": 0.22, "w": 0.22, "h": 0.24 },
+      "countries": [
+        {
+          "id": "aurora_union",
+          "title": "Aurora Union",
+          "short": "AU",
+          "faction": "IEF",
+          "flag": "flag_aurora_union.png",
+          "desc": "Supranational Aurora bloc spanning Aurorenia. Tiger-class rotary doctrine — includes North Akron signatories Valorterra and Cyattersberg."
+        },
+        {
+          "id": "ent",
+          "title": "Empire of the Nickel Territories",
+          "short": "ENT",
+          "faction": "IEF",
+          "flag": "flag_empire_nickel_territories.png",
+          "desc": "Aurora industrial empire. Joost FJ-22 and FJ-40 bloodlines — high potentiality interceptors built around rare-earth refineries."
+        },
+        {
+          "id": "nakur_yatshin",
+          "title": "Union of Nakur-Yatshin States",
+          "short": "NYS",
+          "faction": "BLIC",
+          "flag": "flag_union_nakur_yatshin.png",
+          "desc": "Multi-republic union on the Aurora rim. Zhurbakiv Wishbone ESM platforms and Kub point defense."
+        },
+        {
+          "id": "sazkhokia",
+          "title": "Republic of Sazkhokia",
+          "short": "SZK",
+          "faction": "BLIC",
+          "flag": "flag_sazkhokia.png",
+          "desc": "Aurora republic. Koridor K-1 lead-in fighters and Fortran-class multirole exports."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 1962,
+          "date": "11.08",
+          "title": "Nickel charter",
+          "text": "ENT consolidates smelter cities into a single imperial jurisdiction under the Aurora registry — securing rare-earth refinery corridors."
+        },
+        {
+          "year": 1991,
+          "date": "12.26",
+          "title": "Rim republics reorganized",
+          "text": "After the Cibadian dissolution, Nakur-Yatshin and Sazkhokia consolidate on the Aurora rim — inheriting Koridor and Kub regiments."
+        },
+        {
+          "year": 1998,
+          "date": "01.30",
+          "title": "Aurora charter",
+          "text": "The Aurora Union charter is signed — binding Aurorenian cantons with North Akron partners Valorterra and Cyattersberg under shared airworthiness codes."
+        }
+      ]
+    },
+    {
+      "id": "renia",
+      "title": "Renia",
+      "summary": "East Renia and Southeast Renia. Qiyang Chiqiangi fighters, Sotomi Shachi aviation, Kashtanistan Tarpan regiments — BLIC export aviation and imperial rotary doctrine.",
+      "map_region": { "x": 0.1, "y": 0.48, "w": 0.2, "h": 0.22 },
+      "countries": [
+        {
+          "id": "sotomi",
+          "title": "Empire of Sotomi States",
+          "short": "SOT",
+          "faction": "ICAF",
+          "flag": "flag_empire_of_sotomi_states.png",
+          "desc": "East Renia imperial power. Yosuga AHS-66 Shachi and naval aviation traditions — ICAF-aligned hegemon of the eastern belts."
+        },
+        {
+          "id": "qiyang",
+          "title": "Federal Republic of Qiyang",
+          "short": "QYG",
+          "faction": "BLIC",
+          "flag": "flag_federal_republic_qiyang.png",
+          "desc": "East Renia aerospace core. Chiqiangi J-8B, J/A-11, and Hulienjiang JF-10/JF-15 multirole families."
+        },
+        {
+          "id": "kashtanistan",
+          "title": "Islamic Republic of Kashtanistan",
+          "short": "KAS",
+          "faction": "BLIC",
+          "flag": "flag_islamic_republic_kashtanistan.png",
+          "desc": "Southeast Renia regional power. KAC KF-12 Tarpan and high-desert air bases overlooking Tafriqiyah approaches."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 1975,
+          "date": "08.01",
+          "title": "Sotomi imperial consolidation",
+          "text": "Sotomi merges the East Renia isles under a single naval-air empire — Shachi aviation doctrine established."
+        },
+        {
+          "year": 2008,
+          "date": "05.17",
+          "title": "Southeast Renia rearmament",
+          "text": "Kashtanistan fields first Tarpan squadron — Southeast Renia air balance shifts toward BLIC plateau dominance."
+        },
+        {
+          "year": 1983,
+          "date": "12.17",
+          "title": "Chiqiangi merger",
+          "text": "Qiyang state aircraft bureaus consolidate into Chiqiangi — J-8 program launches East Renia's fourth-generation push."
+        },
+        {
+          "year": 2012,
+          "date": "03.08",
+          "title": "Qiyah Spring",
+          "text": "Urban uprisings ripple through Qiyang cities — no-fly enforcement and brittle truces across East Renia."
+        }
+      ]
+    },
+    {
+      "id": "maristania",
+      "title": "Maristania",
+      "summary": "Far-eastern manufacturing belt — geographic Maristania. Qiyang is registered under East Renia; sovereign registry expanding.",
+      "map_region": { "x": 0.72, "y": 0.12, "w": 0.22, "h": 0.24 },
+      "countries": [],
+      "timeline": [
+        {
+          "year": 1983,
+          "date": "12.17",
+          "title": "Chiqiangi merger",
+          "text": "State aircraft bureaus consolidate in Qiyang — later reclassified under East Renia in the Domini registry."
+        }
+      ]
+    },
+    {
+      "id": "serano",
+      "title": "Serano",
+      "summary": "Southern ocean gateway — archipelagos, shipping lanes, and neutral ports between Socorchis and Atakprim. Registry expanding.",
+      "map_region": { "x": 0.68, "y": 0.68, "w": 0.18, "h": 0.2 },
+      "countries": [
+        {
+          "id": "serano_league",
+          "title": "Serano Port League",
+          "short": "SPL",
+          "faction": "Neutral",
+          "flag": "",
+          "desc": "Confederation of free ports — air registry reserved for future Serano campaigns and trade-war scenarios."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 2001,
+          "date": "02.09",
+          "title": "Neutral corridor",
+          "text": "Serano League declares open shipping air corridors — contested by Socorchis and Tafriqiyah patrols."
+        }
+      ]
+    },
+    {
+      "id": "pole_akronistyia",
+      "title": "Pole Of Akronistyia",
+      "summary": "Domini's polar research belt — ice runways, auroral SIGINT sites, and expeditionary outposts. No sovereign states; international science stations only.",
+      "map_region": { "x": 0.42, "y": 0.02, "w": 0.16, "h": 0.1 },
+      "countries": [
+        {
+          "id": "akronistyia_station",
+          "title": "Akronistyia Joint Research Station",
+          "short": "AJRS",
+          "faction": "International",
+          "flag": "",
+          "desc": "Multi-national polar outpost — long-range reconnaissance and arctic test flights. No permanent air wing."
+        }
+      ],
+      "timeline": [
+        {
+          "year": 1968,
+          "date": "11.22",
+          "title": "First ice runway",
+          "text": "Joint IEF–BLIC expedition lands the first seasonal jet on Akronistyia shelf ice."
+        }
+      ]
+    }
+  ]
+}

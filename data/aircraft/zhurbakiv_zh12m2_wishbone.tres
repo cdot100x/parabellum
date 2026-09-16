@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/zhurbakiv_zh12m2_wishbone.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_union_nakur_yatshin.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/zhurbakiv_zh12m2_wishbone.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "zhurbakiv_zh12m2_wishbone"
+display_name = "Zhurbakiv Zh-12M2 Wishbone"
+role = "Strategic Bomber"
+nation = "Union of Nakur-Yatshin States"
+description = "Zhurbakiv swing-wing bomber. Long-range wishbone — strategic punch, slow to unlock its bar."
+era = "Special"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Tu-22M3 class"
+variant_code = "Zh-12M2"
+max_speed_kmh = 2300
+mach_max = 1.88
+combat_radius_km = 2200
+service_ceiling_m = 13300
+empty_weight_kg = 58000
+thrust_kn = 400.0
+hardpoints = 0
+crew = 4
+upgrade_modules = [{
+"desc": "Strategic bomber AESA wall for Zh-12M2 long-range search.",
+"id": "aesa_zh12_wishbone",
+"locked": true,
+"name": "AESA — Wishbone Nose Wall",
+"slot": "Sensors"
+}, {
+"desc": "Tail gallery DIRCM covering pursuit fighters on the Wishbone.",
+"id": "dircm_zh12_tail",
+"locked": true,
+"name": "DIRCM Tail Gallery",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM for continental SAM corridors and fighter CAP belts.",
+"id": "esm_zh12_strat",
+"locked": true,
+"name": "ESM Strategic Corridor",
+"slot": "EW"
+}, {
+"desc": "Expanded chaff and flare banks for a slow strategic bomber.",
+"id": "def_zh12_chaff",
+"locked": true,
+"name": "Heavy Chaff/Flare Banks",
+"slot": "Defensive"
+}, {
+"desc": "Astro-nav core for Zhurbakiv over-the-pole and long dark legs.",
+"id": "nav_zh12_astro",
+"locked": true,
+"name": "Strategic Astro Nav",
+"slot": "Navigation"
+}, {
+"desc": "Rotary bay firebus for sequenced strategic releases.",
+"id": "wpn_zh12_rotary",
+"locked": true,
+"name": "Rotary Bay Firebus",
+"slot": "Weapons Bus"
+}]

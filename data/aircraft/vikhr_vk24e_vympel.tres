@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_union_nakur_yatshin.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/vikhr_vk24e_vympel.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/vikhr_vk24e_vympel.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "vikhr_vk24e_vympel"
+display_name = "Vikhr VK-24E Vympel"
+role = "Attack Helicopter"
+nation = "Union of Nakur-Yatshin States"
+description = "Vikhr (Mil Moscow-line) flying IFV. Heavy Hind-class punch."
+category = "helicopter"
+manufacturer = "Vikhr"
+era = "Cold War"
+tier = "Veteran"
+potentiality_filled = 4
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "Mi-24 Hind"
+max_speed_kmh = 335
+mach_max = 0.0
+combat_radius_km = 450
+service_ceiling_m = 4500
+empty_weight_kg = 8500
+thrust_kn = 0.0
+hardpoints = 6
+crew = 2
+upgrade_modules = [{
+"desc": "Vikhr AESA mast for VK-24E Vympel attack helicopters.",
+"id": "aesa_vk24_vympel",
+"locked": true,
+"name": "AESA — Vympel Mast Face",
+"slot": "Sensors"
+}, {
+"desc": "Twin DIRCM heads for Nakur-Yatshin Vympel gunships.",
+"id": "dircm_vk24_nakur",
+"locked": true,
+"name": "DIRCM Nakur Twin Heads",
+"slot": "Self-Protect"
+}, {
+"desc": "Frontline ESM for AAA and MANPADS belts over contested fields.",
+"id": "esm_vk24_front",
+"locked": true,
+"name": "ESM Frontline Ear",
+"slot": "EW"
+}, {
+"desc": "Extra cockpit armor plates for VK-24E crew survivability.",
+"id": "arm_vk24_cockpit",
+"locked": true,
+"name": "Cockpit Armor Upscale",
+"slot": "Armor"
+}, {
+"desc": "ATGM weapons bus for Vikhr precision strikes.",
+"id": "wpn_vk24_atgm",
+"locked": true,
+"name": "Vympel ATGM Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Hot-and-high power pack for mountain and desert Vympel pads.",
+"id": "eng_vk24_hot",
+"locked": true,
+"name": "Hot-High Power Pack",
+"slot": "Engine"
+}]

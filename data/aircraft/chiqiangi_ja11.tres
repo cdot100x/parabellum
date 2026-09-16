@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/chiqiangi_ja11.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/chiqiangi_ja11.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "chiqiangi_ja11"
+display_name = "Chiqiangi J/A-11"
+role = "Air Superiority"
+nation = "Federal Republic of Qiyang"
+description = "Chiqiangi Flanker-bloodline for Qiyang. Twin-engine workhorse with solid potentiality."
+era = "Multirole Era"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely J-11 class"
+variant_code = "J/A-11"
+max_speed_kmh = 2500
+mach_max = 2.35
+combat_radius_km = 1500
+service_ceiling_m = 18500
+empty_weight_kg = 16380
+thrust_kn = 246.0
+hardpoints = 10
+crew = 1
+upgrade_modules = [{
+"desc": "Full AESA face for Qiyang canard air-superiority fights.",
+"id": "aesa_ja11_canard",
+"locked": true,
+"name": "AESA — J/A-11 Canard Face",
+"slot": "Sensors"
+}, {
+"desc": "Twin DIRCM covering canard blind spots on the J/A-11.",
+"id": "dircm_ja11_twin",
+"locked": true,
+"name": "DIRCM Twin Canard Guard",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM library heavy on flanker-class and AEW emitters.",
+"id": "esm_ja11_flanker",
+"locked": true,
+"name": "ESM Flanker-Killer Suite",
+"slot": "EW"
+}, {
+"desc": "FCS authority bump for Chiqiangi canard pitch rates.",
+"id": "fcs_ja11_canard",
+"locked": true,
+"name": "Canard-Authority FCS",
+"slot": "FCS"
+}, {
+"desc": "IRST package for silent track in Qiyang air-superiority CAP.",
+"id": "irst_ja11_ols",
+"locked": true,
+"name": "OLS Canard IRST",
+"slot": "IRST"
+}, {
+"desc": "Squadron mesh so J/A-11 four-ships share tracks without radio chatter.",
+"id": "lnk_ja11_platoon",
+"locked": true,
+"name": "Platoon Datalink Mesh",
+"slot": "Datalink"
+}]

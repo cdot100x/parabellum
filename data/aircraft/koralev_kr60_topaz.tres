@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_union_nakur_yatshin.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/koralev_kr60_topaz.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/koralev_kr60_topaz.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "koralev_kr60_topaz"
+display_name = "Koralev KR-60 Topaz"
+role = "Utility / Assault"
+nation = "Union of Nakur-Yatshin States"
+description = "Koralev (Kamov-line) coaxial utility. Nakur-Yatshin medium lift."
+category = "helicopter"
+manufacturer = "Koralev"
+era = "Modern"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "Kamov Ka-60 Kasatka"
+max_speed_kmh = 300
+mach_max = 0.0
+combat_radius_km = 600
+service_ceiling_m = 5100
+empty_weight_kg = 4000
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "Koralev AESA for KR-60 Topaz utility and assault work.",
+"id": "aesa_kr60_topaz",
+"locked": true,
+"name": "AESA — Topaz Utility Face",
+"slot": "Sensors"
+}, {
+"desc": "Twin DIRCM for Nakur-Yatshin Topaz assault lifts.",
+"id": "dircm_kr60_topaz",
+"locked": true,
+"name": "DIRCM Topaz Twin",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM listener for assault LZ threat radars.",
+"id": "esm_kr60_assault",
+"locked": true,
+"name": "ESM Assault Listener",
+"slot": "EW"
+}, {
+"desc": "Cabin armor plates for KR-60 troop assault profiles.",
+"id": "arm_kr60_cabin",
+"locked": true,
+"name": "Assault Cabin Plates",
+"slot": "Armor"
+}, {
+"desc": "Dust cascade filters for dusty Nakur forward pads.",
+"id": "eng_kr60_dust",
+"locked": true,
+"name": "Utility Dust Cascade",
+"slot": "Engine"
+}, {
+"desc": "Bus for door guns and optional rocket pods on Topaz.",
+"id": "wpn_kr60_door",
+"locked": true,
+"name": "Door-Gun / Rocket Bus",
+"slot": "Weapons Bus"
+}]

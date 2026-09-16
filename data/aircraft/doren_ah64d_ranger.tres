@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/doren_ah64d_ranger.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/doren_ah64d_ranger.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "doren_ah64d_ranger"
+display_name = "Doren AH-64D Ranger"
+role = "Attack Helicopter"
+nation = "New Akron Federation"
+description = "Doren (Boeing-line) heavy attack helicopter. Tank-killer bloodline."
+category = "helicopter"
+manufacturer = "Doren"
+era = "Late Cold War"
+tier = "Regular"
+potentiality_filled = 3
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "AH-64D Apache"
+max_speed_kmh = 265
+mach_max = 0.0
+combat_radius_km = 480
+service_ceiling_m = 6400
+empty_weight_kg = 5165
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "Doren AESA fire-control face for AH-64D Ranger attack work.",
+"id": "aesa_ah64d_ranger",
+"locked": true,
+"name": "AESA — Ranger Fire-Control",
+"slot": "Sensors"
+}, {
+"desc": "Dual DIRCM turrets for New Akron Ranger gunships.",
+"id": "dircm_ah64d_ranger",
+"locked": true,
+"name": "DIRCM Ranger Dual Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM suite for AAA and SAM threats in Ranger AOs.",
+"id": "esm_ah64d_ranger",
+"locked": true,
+"name": "ESM Ranger Threat Suite",
+"slot": "EW"
+}, {
+"desc": "TADS refresh for AH-64D night and dusty target handoff.",
+"id": "tads_ah64d",
+"locked": true,
+"name": "TADS/Arrowhead Refresh",
+"slot": "Sensors Extra"
+}, {
+"desc": "Firebus sync for guided missiles on Ranger pylons.",
+"id": "wpn_ah64d_hellfire",
+"locked": true,
+"name": "Hellfire Firebus Sync",
+"slot": "Weapons Bus"
+}, {
+"desc": "CAS datalink tying Rangers into New Akron joint fires.",
+"id": "lnk_ah64d_cas",
+"locked": true,
+"name": "Ranger CAS Datalink",
+"slot": "Datalink"
+}]

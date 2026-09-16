@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/kac_kf12_tarpan.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_islamic_republic_kashtanistan.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/kac_kf12_tarpan.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "kac_kf12_tarpan"
+display_name = "KAC KF-12 Tarpan"
+role = "Multirole / Light Strike"
+nation = "Islamic Republic of Kashtanistan"
+description = "Kashtanistan Aerospace Corporation light multirole — Tarpan for desert and littoral fights. Export-friendly, punchy radar, modest potentiality."
+manufacturer = "Kashtanistan Aerospace Corporation"
+era = "Modern"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely JF-17 Thunder class"
+variant_code = "KF-12"
+max_speed_kmh = 1910
+mach_max = 1.6
+combat_radius_km = 700
+service_ceiling_m = 16920
+empty_weight_kg = 6586
+thrust_kn = 86.0
+hardpoints = 7
+crew = 1
+radar_range_m = 9000.0
+has_rwr = true
+has_maws = true
+upgrade_modules = [{
+"desc": "KAC AESA tuned for desert lookdown and dust returns over Kashtanistan.",
+"id": "aesa_kf12_tarpan",
+"locked": true,
+"name": "AESA — Tarpan Desert Face",
+"slot": "Sensors"
+}, {
+"desc": "Sand-sealed DIRCM for KF-12 Tarpan ops in grit and heat.",
+"id": "dircm_kf12_sand",
+"locked": true,
+"name": "DIRCM Sand-Sealed Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM suite for border radars and mobile SAMs in the Tarpan AO.",
+"id": "esm_kf12_kac",
+"locked": true,
+"name": "ESM KAC Border Suite",
+"slot": "EW"
+}, {
+"desc": "Inlet dust filters keeping Tarpan turbines alive in haboobs.",
+"id": "eng_kf12_dust",
+"locked": true,
+"name": "Desert Dust Filter Pack",
+"slot": "Engine"
+}, {
+"desc": "Light-strike weapons bus for KF-12 precision kits.",
+"id": "wpn_kf12_strike",
+"locked": true,
+"name": "Light Strike Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Extra avionics cooling for blistering Kashtanistan ramps.",
+"id": "cool_kf12_avionics",
+"locked": true,
+"name": "Desert Avionics Cooler",
+"slot": "Cooling"
+}]

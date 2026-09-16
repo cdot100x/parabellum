@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/xian_jf3.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_qiyang.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+id = "xian_jf3"
+display_name = "Xi'an JF-3 新手龙"
+role = "Advanced Trainer / Light Fighter"
+nation = "Federal Republic of Qiyang"
+description = "Xi'an Aircrafts JF-3 新手龙 (Newbie Dragon) — Qiyang lead-in fighter-trainer. Test airframe for Parabellum first-party combat-sim assets. 1990s glass + HMS look-kill path. Syllabus jet before Hulienjiang frontline bloodlines."
+category = "fixed_wing"
+manufacturer = "Xi'an Aircrafts"
+era = "Lead-In"
+tier = "Newbie"
+potentiality_filled = 1
+potentiality_max = 5
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Player-authored — loosely Guizhou JL-9 / FTC-2000 class"
+max_speed_kmh = 1100
+mach_max = 1.05
+combat_radius_km = 800
+service_ceiling_m = 16000
+empty_weight_kg = 4900
+thrust_kn = 52.0
+hardpoints = 5
+crew = 2
+radar_range_m = 6000.0
+has_rwr = true
+has_maws = false
+future_update = false
+lineage_family = "xian_jf3"
+variant_code = "JF-3"
+starter_weapons = PackedStringArray("Internal gun", "PL-8", "PL-10", "PL-12", "PL-15", "CM-704KG", "Type 90-1 HEAT Rockets", "Bomb")
+upgrade_modules = [{
+"desc": "1990s trainer radar face — enough paint for syllabus BVR before frontline AESA.",
+"id": "radar_jf3_syllabus",
+"locked": false,
+"name": "Syllabus Pulse Radar",
+"slot": "Sensors"
+}, {
+"desc": "HS-9 style helmet sight — green look-kill for PL-8 / PL-10 off-boresight.",
+"id": "hms_jf3_tong",
+"locked": false,
+"name": "HMS-93 瞳 Look-Kill",
+"slot": "Avionics"
+}, {
+"desc": "Soft g-limiter and departure cues for Newbie Dragon student sorties.",
+"id": "fcs_jf3_trainer",
+"locked": false,
+"name": "Trainer FCS Soft-Limiter",
+"slot": "Flight Controls"
+}, {
+"desc": "Starter A2A ladder: gun, PL-8 → PL-10 → PL-12 → PL-15.",
+"id": "wpn_jf3_starter_a2a",
+"locked": false,
+"name": "Starter — PL-8/10/12/15",
+"slot": "Weapons Bus"
+}, {
+"desc": "Starter A2G: CM-704KG, Type 90-1 HEAT rockets, bomb.",
+"id": "wpn_jf3_starter_a2g",
+"locked": false,
+"name": "Starter — CM-704KG / Type 90-1 / Bomb",
+"slot": "Weapons Bus"
+}]

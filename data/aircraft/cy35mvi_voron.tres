@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cy35mvi_voron.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy35mvi_voron.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy35mvi_voron"
+display_name = "Cy-35MVI Voron"
+role = "Air Superiority / Marine-Naval"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy Flanker for marines and naval ops. AESA-era bite, very high upgrade potentiality — untapped mega potential."
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Su-35 class"
+variant_code = "Cy-35MVI"
+max_speed_kmh = 2400
+mach_max = 2.25
+combat_radius_km = 1600
+service_ceiling_m = 18000
+empty_weight_kg = 19000
+thrust_kn = 284.0
+hardpoints = 12
+crew = 1
+upgrade_modules = [{
+"desc": "Cykovskiy marine AESA with long lookdown for Voron over blue water.",
+"id": "aesa_cy35_voron_n035",
+"locked": true,
+"name": "AESA — Voron N035M",
+"slot": "Sensors"
+}, {
+"desc": "Quad DIRCM coverage for Cy-35MVI when sailing with naval strike packages.",
+"id": "dircm_cy35_raven",
+"locked": true,
+"name": "DIRCM Raven Quads",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM focused on shipborne illuminators and coastal early-warning nets.",
+"id": "esm_cy35_marine",
+"locked": true,
+"name": "ESM Marine Band Suite",
+"slot": "EW"
+}, {
+"desc": "Tanayov naval sealing pack — hinges, intakes, and avionics bays for spray.",
+"id": "nav_cy35_saltseal",
+"locked": true,
+"name": "Salt-Seal Airframe Pack",
+"slot": "Naval"
+}, {
+"desc": "IRST boom upgrade for silent track on carriers and tankers.",
+"id": "irst_cy35_ols",
+"locked": true,
+"name": "OLS-MVI IRST Boom",
+"slot": "IRST"
+}, {
+"desc": "TVT nozzle kit for Voron post-stall recovery in knife fights.",
+"id": "eng_cy35_tvt",
+"locked": true,
+"name": "Thrust-Vector Nozzle Kit",
+"slot": "Engine"
+}]

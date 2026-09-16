@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cykovskiy_o80_devils_tower.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cykovskiy_o80_devils_tower.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cykovskiy_o80_devils_tower"
+display_name = "Cykovskiy O-80 Devil's Tower"
+role = "Loyal Wingman / UCAV"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy hunter drone. No cockpit ego — pack hunter with a tall potentiality tower."
+era = "Special"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely S-70 class"
+variant_code = "O-80"
+max_speed_kmh = 1000
+mach_max = 0.9
+combat_radius_km = 1500
+service_ceiling_m = 14000
+empty_weight_kg = 20000
+thrust_kn = 180.0
+hardpoints = 0
+crew = 0
+radar_range_m = 14000.0
+has_rwr = true
+has_maws = true
+upgrade_modules = [{
+"desc": "Compact AESA for Cykovskiy O-80 loyal wingman search and cueing.",
+"id": "aesa_o80_tower",
+"locked": true,
+"name": "AESA — Devil Tower Face",
+"slot": "Sensors"
+}, {
+"desc": "Micro DIRCM for unmanned O-80 airframes that cannot eject.",
+"id": "dircm_o80_drone",
+"locked": true,
+"name": "DIRCM Micro Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "Forward ESM ear so Devil Tower soaks emitters for the manned lead.",
+"id": "esm_o80_scout",
+"locked": true,
+"name": "ESM Scout Ear",
+"slot": "EW"
+}, {
+"desc": "Behavior core that keeps O-80 stacked on Cy-57M and Cy-35 leads.",
+"id": "ai_o80_loyal",
+"locked": true,
+"name": "Loyal AI Behavior Core",
+"slot": "Autonomy"
+}, {
+"desc": "High-rate mesh modem for Devil Tower to manned fighter handoff.",
+"id": "lnk_o80_mesh",
+"locked": true,
+"name": "Wingman Mesh Modem",
+"slot": "Datalink"
+}, {
+"desc": "Spool map favoring loiter so O-80 stays on station with the package.",
+"id": "eng_o80_endurance",
+"locked": true,
+"name": "Endurance Spool Map",
+"slot": "Engine"
+}]

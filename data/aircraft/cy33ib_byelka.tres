@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy33ib_byelka.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy33ib_byelka"
+display_name = "Cy-33IB Byelka"
+role = "Strike Naval"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy side-by-side naval strike — Byelka. Fitted with N036E Byelka-E radar, SPO-150 / L-150 ESM/EW, and wingtip Sea Wizard ECM pods."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-34 Fullback / naval strike class"
+max_speed_kmh = 1900
+mach_max = 1.8
+combat_radius_km = 1100
+service_ceiling_m = 15000
+empty_weight_kg = 22500
+thrust_kn = 274.0
+hardpoints = 12
+crew = 2
+radar_range_m = 16000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy33"
+variant_code = "Cy-33IB"
+starter_weapons = PackedStringArray("2× R-73E", "2× R-77K", "Wingtip Sea Wizard ECM Pod", "GSh-30-1 ×295")
+upgrade_modules = [{
+"desc": "N036E Byelka-E AESA — naval lookdown and strike cueing for Cy-33IB.",
+"id": "radar_cy33_n036e_byelka_e",
+"locked": false,
+"name": "N036E Byelka-E Radar",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150 / L-150 ESM/EW suite — spectrum warning and soft-kill for naval packages.",
+"id": "ew_cy33_spo150_l150",
+"locked": false,
+"name": "SPO-150 / L-150 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "Wingtip Sea Wizard ECM pods — starter self-protect for Byelka strike runs.",
+"id": "ecm_cy33_sea_wizard",
+"locked": false,
+"name": "Sea Wizard ECM (Wingtips)",
+"slot": "EW"
+}, {
+"desc": "Starter A2A: 2× R-73E + 2× R-77K on the Cy-33IB hardpoint map.",
+"id": "wpn_cy33_starter_a2a",
+"locked": false,
+"name": "Starter — 2× R-73E / 2× R-77K",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×295 rounds (Domini load).",
+"id": "gun_cy33_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×295",
+"slot": "Gun"
+}, {
+"desc": "Salt-seal naval pack — canopy, avionics bays, and gear for carrier / coastal spray.",
+"id": "nav_cy33_saltseal",
+"locked": true,
+"name": "Naval Salt-Seal Pack",
+"slot": "Naval"
+}]

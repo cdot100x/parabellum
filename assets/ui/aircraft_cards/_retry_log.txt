@@ -1,0 +1,39 @@
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/Ka-60.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/Ka-60.jpg... -> HTTP Error 404: Not Found
+OK koralev_kr60_topaz size=278087 magic=True src=NASA spacecraft comparison.jpg
+=== yosuga_ahs66_shachi ===
+  attempt 0 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 0 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg... -> HTTP Error 404: Not Found
+  attempt 1 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 1 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg... -> HTTP Error 404: Not Found
+  attempt 2 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 2 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg... -> HTTP Error 404: Not Found
+  attempt 3 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 3 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg... -> HTTP Error 404: Not Found
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/OH-1_Ninja.jpg... -> HTTP Error 404: Not Found
+  attempt 0 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 0 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg... -> HTTP Error 404: Not Found
+  attempt 1 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 1 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg... -> HTTP Error 404: Not Found
+  attempt 2 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 2 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg... -> HTTP Error 404: Not Found
+  attempt 3 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 3 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg... -> HTTP Error 404: Not Found
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg?width=1280... -> HTTP Error 404: Not Found
+  attempt 4 https://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki_OH-1.jpg... -> HTTP Error 404: Not Found
+OK yosuga_ahs66_shachi size=238697 magic=True src=JGSDF OH-1 (32634) in Camp Yao.jpg
+=== FINAL ===
+OK	luther_uh1sm1_rat.png	193342	UH-1Y_Venom.jpg
+OK	luther_ah1w_redhawk.png	203055	AH-1W Super Cobra assigned to HMLA 167.jpg
+OK	doren_ah64d_ranger.png	242842	AH-64D_Apache_Longbow.jpg
+OK	lawrence_mh60_dap.png	293403	UH-60_Black_Hawk.jpg
+OK	lawrence_sh60_orca.png	263580	SH-60B_Seahawk.jpg
+OK	lawrence_ch53_podarge.png	197284	Sikorsky CH-53E Super Stallion USMC 165503 FDK MD1.jpg
+OK	lawrence_mh60x_stealth_predator.png	114108	Sikorsky S-70i (Polish Police, SN-71XP).jpg
+OK	doren_lawrence_rah66m_longhorn.png	157675	Rah-66 c. 2000.jpg
+OK	auroracopter.png	253471	German Army Eurocopter EC 665 Tiger UHT 98-18 5.jpg
+OK	auroracopter_firehawk_ums2.png	253471	German Army Eurocopter EC 665 Tiger UHT 98-18 5.jpg (same as auroracopter)
+OK	vikhr_vk24e_vympel.png	316715	Mil_Mi-24.jpg
+OK	koralev_kr60_topaz.png	278087	NASA spacecraft comparison.jpg
+OK	yosuga_ahs66_shachi.png	238697	JGSDF OH-1 (32634) in Camp Yao.jpg

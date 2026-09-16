@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_valorterra.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy30mkk.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy30mkk"
+display_name = "Cy-30MKK [1992]"
+role = "Priority Mission Operations / Special Teams"
+nation = "Federal Republic of Valorterra"
+description = "Cykovskiy Cy-30MKK — Valorterran testbed that went operational with Special Units. Tandem two-seat Priority Mission / Special Teams airframe with N011ESA Bars AESA, SPO-150 / L-150 ESM/EW, and ZRG ICBS-2 COIL (illuminating continuous-beam) as a starter energy weapon."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Special"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 7
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-30MKK / 1990s export Flanker special-ops testbed"
+max_speed_kmh = 2120
+mach_max = 2.0
+combat_radius_km = 1200
+service_ceiling_m = 17300
+empty_weight_kg = 18400
+thrust_kn = 250.0
+hardpoints = 12
+crew = 2
+radar_range_m = 16000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy30"
+variant_code = "Cy-30MKK [1992]"
+starter_weapons = PackedStringArray("2× R-73E", "1× ZRG ICBS-2 COIL (Illuminating Continuous Beam System)", "GSh-30-1 ×295")
+upgrade_modules = [{
+"desc": "N011ESA Bars AESA — 1992 special-teams lookdown for Cy-30MKK.",
+"id": "radar_cy30mkk_n011esa_bars",
+"locked": false,
+"name": "N011ESA Bars AESA",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150 / L-150 ESM/EW — spectrum suite for Priority Mission packages.",
+"id": "ew_cy30mkk_spo150_l150",
+"locked": false,
+"name": "SPO-150 / L-150 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "ZRG (Zenith & Roscoe Group) ICBS-2 COIL — illuminating continuous-beam chemical oxygen iodine laser.",
+"id": "dew_cy30mkk_icbs2_coil",
+"locked": false,
+"name": "ZRG ICBS-2 COIL Weapon",
+"slot": "Weapons Bus"
+}, {
+"desc": "Starter A2A: 2× R-73E on the Cy-30MKK special hardpoint map.",
+"id": "wpn_cy30mkk_starter_a2a",
+"locked": false,
+"name": "Starter — 2× R-73E",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×295 rounds (Domini load).",
+"id": "gun_cy30mkk_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×295",
+"slot": "Gun"
+}]

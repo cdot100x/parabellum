@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/lawrence_mh60x_stealth_predator.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/lawrence_mh60x_stealth_predator.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "lawrence_mh60x_stealth_predator"
+display_name = "Lawrence MH-60X Stealth Predator"
+role = "Special Operations"
+nation = "New Akron Federation"
+description = "Quiet special-ops penetrator. Silent Hawk lineage."
+category = "helicopter"
+manufacturer = "Lawrence"
+era = "Next-Gen"
+tier = "Veteran"
+potentiality_filled = 4
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "MH-X Silent Hawk"
+max_speed_kmh = 295
+mach_max = 0.0
+combat_radius_km = 520
+service_ceiling_m = 5500
+empty_weight_kg = 6400
+thrust_kn = 0.0
+hardpoints = 4
+crew = 4
+upgrade_modules = [{
+"desc": "Low-observable AESA face for Lawrence MH-60X Stealth Predator.",
+"id": "aesa_mh60x_predator",
+"locked": true,
+"name": "AESA — Stealth Predator Face",
+"slot": "Sensors"
+}, {
+"desc": "Conformal DIRCM veil preserving MH-60X stealth lines.",
+"id": "dircm_mh60x_stealth",
+"locked": true,
+"name": "DIRCM Conformal Veil",
+"slot": "Self-Protect"
+}, {
+"desc": "Whisper ESM for special operations ingress corridors.",
+"id": "esm_mh60x_specops",
+"locked": true,
+"name": "ESM SpecOps Whisper",
+"slot": "EW"
+}, {
+"desc": "RAM treatment for rotor blade roots and hub on the Predator.",
+"id": "ram_mh60x_blade",
+"locked": true,
+"name": "Blade/Hub RAM Treatment",
+"slot": "Stealth"
+}, {
+"desc": "Black-network datalink for silent MH-60X package coordination.",
+"id": "lnk_mh60x_black",
+"locked": true,
+"name": "Black Network Link",
+"slot": "Datalink"
+}, {
+"desc": "Covert EO ball for night special operations inserts.",
+"id": "eo_mh60x_ball",
+"locked": true,
+"name": "Covert EO Ball",
+"slot": "Sensors Extra"
+}]

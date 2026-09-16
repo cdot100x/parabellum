@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federation_of_sumner.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/luther_uh1sm1_rat.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/luther_uh1sm1_rat.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "luther_uh1sm1_rat"
+display_name = "Luther UH-1SM1 Rat"
+role = "Utility / Troop Lift"
+nation = "Federation of Sumner"
+description = "Luther (Bell-line) workhorse. Sumner muddy-boot utility."
+category = "helicopter"
+manufacturer = "Luther"
+era = "Cold War"
+tier = "Newbie"
+potentiality_filled = 1
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "UH-1Y Venom"
+max_speed_kmh = 290
+mach_max = 0.0
+combat_radius_km = 240
+service_ceiling_m = 6100
+empty_weight_kg = 5370
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "AESA retrofit nose for Luther UH-1SM1 Rat utility birds.",
+"id": "aesa_uh1_rat_retro",
+"locked": true,
+"name": "AESA Retrofit — Rat Nose",
+"slot": "Sensors"
+}, {
+"desc": "Belly DIRCM for troop-lift Rats under Sumner skies.",
+"id": "dircm_uh1_rat",
+"locked": true,
+"name": "DIRCM Rat Belly Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "Utility ESM listening for AAA while hauling sticks of infantry.",
+"id": "esm_uh1_rat",
+"locked": true,
+"name": "ESM Utility Listener",
+"slot": "EW"
+}, {
+"desc": "Dust filters for UH-1SM1 ops off dirt Sumner LZs.",
+"id": "eng_uh1_dust",
+"locked": true,
+"name": "Utility Dust Filter Kit",
+"slot": "Engine"
+}, {
+"desc": "NVG-compatible lighting and bus for night troop inserts.",
+"id": "avi_uh1_night",
+"locked": true,
+"name": "Night Vision Compatible Bus",
+"slot": "Avionics"
+}, {
+"desc": "Reinforced door-gun mounts for Rat self-escort.",
+"id": "def_uh1_door",
+"locked": true,
+"name": "Door-Gun Mount Kit",
+"slot": "Defensive"
+}]

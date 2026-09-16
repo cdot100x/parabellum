@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/dtc_f16sm3.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/dtc_f16sm3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "dtc_f16sm3"
+display_name = "DTC F-16SM3"
+role = "Multirole"
+nation = "New Akron Federation"
+description = "Defense Tinker Company Falcon-bloodline for New Akron — SM3 twin-seat Block-60 class. CFT range, AESA bite, mid-high potentiality."
+manufacturer = "Defense Tinker Company"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely F-16D Block 60 class"
+variant_code = "F-16SM3"
+max_speed_kmh = 2120
+mach_max = 2.0
+combat_radius_km = 850
+service_ceiling_m = 15240
+empty_weight_kg = 9200
+thrust_kn = 142.0
+hardpoints = 11
+crew = 2
+radar_range_m = 12000.0
+has_rwr = true
+has_maws = true
+upgrade_modules = [{
+"desc": "DTC AESA face for F-16SM3 multimode New Akron ops.",
+"id": "aesa_f16sm3_dtc",
+"locked": true,
+"name": "AESA — DTC SM3 Face",
+"slot": "Sensors"
+}, {
+"desc": "Chin DIRCM turret for the SM3 Viper-family airframe.",
+"id": "dircm_f16sm3_viper",
+"locked": true,
+"name": "DIRCM Viper Chin Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "DTC ESM pack covering modern fighter and SAM emitters.",
+"id": "esm_f16sm3_dtc",
+"locked": true,
+"name": "ESM DTC Spectrum Pack",
+"slot": "EW"
+}, {
+"desc": "FBW refresh for DTC F-16SM3 high-AoA margins.",
+"id": "fcs_f16sm3_flyby",
+"locked": true,
+"name": "SM3 Fly-By-Wire Refresh",
+"slot": "FCS"
+}, {
+"desc": "Smart-stores bus for guided kits on the SM3.",
+"id": "wpn_f16sm3_smart",
+"locked": true,
+"name": "Smart-Stores Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Federation datalink modem for New Akron package deconfliction.",
+"id": "lnk_f16sm3_link",
+"locked": true,
+"name": "Federation Link Modem",
+"slot": "Datalink"
+}]

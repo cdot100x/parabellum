@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy27_tema3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy27_tema3"
+display_name = "Cy-27 TEMA3"
+role = "Strike Experimental"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy Cy-27 TEMA3 — Технология экспериментальных маневрирующих летательных аппаратов (Technology of experimental maneuvering aircraft). Twin-seat canard strike experimental. Fitted with N035AE Irbis-AE AESA and SPO-150M1 / L-150M1 ESM/EW."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-27 canard twin-seat experimental / TEMA-style demonstrator"
+max_speed_kmh = 2450
+mach_max = 2.25
+combat_radius_km = 1050
+service_ceiling_m = 18000
+empty_weight_kg = 17800
+thrust_kn = 274.0
+hardpoints = 12
+crew = 2
+radar_range_m = 18000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy27"
+variant_code = "Cy-27 TEMA3"
+starter_weapons = PackedStringArray("2× R-73E", "2× R-77-1", "2× S-8 Rocket Pods (dual-racked)", "2× Kh-29T", "GSh-30-1 ×295")
+upgrade_modules = [{
+"desc": "N035AE Irbis-AE AESA — long-look strike and air picture for TEMA3 maneuver trials.",
+"id": "radar_cy27_tema3_n035ae_irbis_ae",
+"locked": false,
+"name": "N035AE Irbis-AE AESA",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150M1 / L-150M1 ESM/EW — upgraded spectrum suite for experimental strike packages.",
+"id": "ew_cy27_tema3_spo150m1_l150m1",
+"locked": false,
+"name": "SPO-150M1 / L-150M1 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "Starter A2A/A2G: 2× R-73E, 2× R-77-1, 2× S-8 dual-rack pods, 2× Kh-29T.",
+"id": "wpn_cy27_tema3_starter",
+"locked": false,
+"name": "Starter — R-73E / R-77-1 / S-8 / Kh-29T",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×295 rounds (Domini load).",
+"id": "gun_cy27_tema3_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×295",
+"slot": "Gun"
+}, {
+"desc": "TEMA3 canard FCS bias for high-AoA maneuvering strike demonstrator work.",
+"id": "fcs_cy27_tema3_canard",
+"locked": true,
+"name": "TEMA3 Canard Maneuver FCS",
+"slot": "FCS"
+}]

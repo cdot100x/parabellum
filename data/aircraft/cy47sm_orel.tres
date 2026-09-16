@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cy47sm_orel.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy47sm_orel.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy47sm_orel"
+display_name = "Cy-47SM Orel"
+role = "Heavy Fighter"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy heavy eagle. Long reach, heavy fangs, high potentiality ceiling."
+era = "Apex"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Su-47 class"
+variant_code = "Cy-47SM"
+max_speed_kmh = 2500
+mach_max = 2.1
+combat_radius_km = 1500
+service_ceiling_m = 18000
+empty_weight_kg = 16500
+thrust_kn = 250.0
+hardpoints = 14
+crew = 1
+upgrade_modules = [{
+"desc": "Heavy Cykovskiy dual-face AESA for Cy-47SM long-range search.",
+"id": "aesa_cy47_orel_dual",
+"locked": true,
+"name": "AESA — Orel Dual Face",
+"slot": "Sensors"
+}, {
+"desc": "Crown-mounted DIRCM array covering above-and-aft arcs on the Orel.",
+"id": "dircm_cy47_eagle",
+"locked": true,
+"name": "DIRCM Eagle Crown",
+"slot": "Self-Protect"
+}, {
+"desc": "Wideband ESM for strategic AEW and SAM belts far from Tanayov.",
+"id": "esm_cy47_strategic",
+"locked": true,
+"name": "ESM Strategic Ear",
+"slot": "EW"
+}, {
+"desc": "RAM strips on Orel leading edges to shave frontal RCS without a full remake.",
+"id": "ram_cy47_leading",
+"locked": true,
+"name": "Leading-Edge RAM Strip",
+"slot": "Stealth"
+}, {
+"desc": "Weapons bus rated for oversized long-range AAMs on Cy-47 hardpoints.",
+"id": "wpn_cy47_heavy",
+"locked": true,
+"name": "Heavy Missile Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "FCS core tuned for high-inertia Cy-47SM energy fighting.",
+"id": "fcs_cy47_heavy",
+"locked": true,
+"name": "Heavy-Fighter FCS Core",
+"slot": "FCS"
+}]

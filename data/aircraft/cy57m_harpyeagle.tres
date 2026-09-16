@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/cy57m_harpyeagle.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy57m_harpyeagle.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy57m_harpyeagle"
+display_name = "Cy-57M Harpy Eagle"
+role = "5th-Gen Apex"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy crown jewel. Monster baseline and one of the largest upgrade bars on Domini."
+era = "Apex"
+tier = "Apex"
+potentiality_filled = 4
+potentiality_max = 8
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely Su-57 class"
+variant_code = "Cy-57M"
+max_speed_kmh = 2600
+mach_max = 2.0
+combat_radius_km = 1500
+service_ceiling_m = 20000
+empty_weight_kg = 18000
+thrust_kn = 294.0
+hardpoints = 12
+crew = 1
+upgrade_modules = [{
+"desc": "Apex LPI AESA for Cy-57M — soft emissions, hard tracks.",
+"id": "aesa_cy57_harpy_lpi",
+"locked": true,
+"name": "AESA — Harpy LPI Face",
+"slot": "Sensors"
+}, {
+"desc": "Distributed DIRCM veil integrated into Harpy Eagle facets.",
+"id": "dircm_cy57_harpy",
+"locked": true,
+"name": "DIRCM Harpy Veil",
+"slot": "Self-Protect"
+}, {
+"desc": "Full-spectrum ESM for 5th-gen threat libraries and LPI radars.",
+"id": "esm_cy57_apex",
+"locked": true,
+"name": "ESM Apex Spectrum",
+"slot": "EW"
+}, {
+"desc": "Depot RAM refresh for Cy-57M edge treatments after high-Mach flights.",
+"id": "ram_cy57_facet",
+"locked": true,
+"name": "Facet RAM Refresh",
+"slot": "Stealth"
+}, {
+"desc": "Mesh link for pairing Harpy Eagle with O-80 Devil Tower wingmen.",
+"id": "lnk_cy57_wingman",
+"locked": true,
+"name": "Loyal-Wingman Mesh Link",
+"slot": "Datalink"
+}, {
+"desc": "Internal weapons bay bus for clean stealth loadouts.",
+"id": "wpn_cy57_ibay",
+"locked": true,
+"name": "Internal Bay Firebus",
+"slot": "Weapons Bus"
+}]

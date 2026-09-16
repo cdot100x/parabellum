@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/sai_s21a_deathless.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_valorterra.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/sai_s21a_deathless.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "sai_s21a_deathless"
+display_name = "SAI S-21A Deathless"
+role = "Stealth Multirole"
+nation = "Federal Republic of Valorterra"
+description = "Spix Aerospace / SAI stealth multirole. Valorterra pride — high potentiality, ghost profile."
+era = "Special"
+tier = "Pro"
+potentiality_filled = 3
+potentiality_max = 7
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely J-31 class"
+lineage_family = "sai_stealth"
+variant_code = "S-21A"
+max_speed_kmh = 2200
+mach_max = 1.8
+combat_radius_km = 1250
+service_ceiling_m = 16000
+empty_weight_kg = 14000
+thrust_kn = 180.0
+hardpoints = 6
+crew = 1
+upgrade_modules = [{
+"desc": "Valorterra LPI AESA buried in S-21A facets for stealth multimode work.",
+"id": "aesa_s21_deathless_lpi",
+"locked": true,
+"name": "AESA — Deathless LPI",
+"slot": "Sensors"
+}, {
+"desc": "Conformal DIRCM veil that keeps the S-21A signature quiet.",
+"id": "dircm_s21_veil",
+"locked": true,
+"name": "DIRCM Deathless Veil",
+"slot": "Self-Protect"
+}, {
+"desc": "Passive ESM for ghosting through contested Valorterra corridors.",
+"id": "esm_s21_ghost",
+"locked": true,
+"name": "ESM Ghost Spectrum",
+"slot": "EW"
+}, {
+"desc": "Depot RAM bake restoring Deathless edge treatments after sorties.",
+"id": "ram_s21_full",
+"locked": true,
+"name": "Full-Body RAM Bake",
+"slot": "Stealth"
+}, {
+"desc": "Internal bay firebus for clean S-21A loadouts.",
+"id": "wpn_s21_ibay",
+"locked": true,
+"name": "Stealth Bay Firebus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Full-sphere MAWS nest feeding the Deathless autopilot break turns.",
+"id": "maws_s21_sphere",
+"locked": true,
+"name": "Spherical MAWS Nest",
+"slot": "MAWS"
+}]

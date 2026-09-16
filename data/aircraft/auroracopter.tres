@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_aurora_union.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/auroracopter.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/auroracopter.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "auroracopter"
+display_name = "Auroracopter"
+role = "Attack Helicopter"
+nation = "Aurora Union"
+description = "Aurora Union attack helicopter. Tiger-class bite for continental ops."
+category = "helicopter"
+manufacturer = "Auroracopter"
+era = "Late Cold War"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "Eurocopter Tiger"
+max_speed_kmh = 290
+mach_max = 0.0
+combat_radius_km = 800
+service_ceiling_m = 4000
+empty_weight_kg = 3060
+thrust_kn = 0.0
+hardpoints = 4
+crew = 2
+upgrade_modules = [{
+"desc": "Mast-mounted AESA retrofit for Auroracopter late cold-war attack work.",
+"id": "aesa_aurora_mast",
+"locked": true,
+"name": "AESA Retrofit — Aurora Mast",
+"slot": "Sensors"
+}, {
+"desc": "Hub-adjacent DIRCM pair covering MANPADS under the Aurora rotor.",
+"id": "dircm_aurora_rotor",
+"locked": true,
+"name": "DIRCM Rotor-Hub Pair",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM ear for Union threat tapes in nap-of-earth corridors.",
+"id": "esm_aurora_union",
+"locked": true,
+"name": "ESM Aurora Union Ear",
+"slot": "EW"
+}, {
+"desc": "Chin FLIR ball upgrade for night CAS with the Auroracopter.",
+"id": "flir_aurora_chin",
+"locked": true,
+"name": "Chin FLIR Ball Upgrade",
+"slot": "Sensors Extra"
+}, {
+"desc": "Engine dust filters for dry Union forward pads.",
+"id": "eng_aurora_dust",
+"locked": true,
+"name": "Rotorcraft Dust Filters",
+"slot": "Engine"
+}, {
+"desc": "Stub-wing bus for rockets and ATGMs on Aurora pylons.",
+"id": "wpn_aurora_stub",
+"locked": true,
+"name": "Stub-Wing Weapons Bus",
+"slot": "Weapons Bus"
+}]

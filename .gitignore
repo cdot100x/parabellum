@@ -1,0 +1,20 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Secrets / local env
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# Huge Domini source maps (import via tools/import_domini_map.py)
+assets/ui/domini/domini_map_wip_full.png
+assets/ui/domini/domini_map_wip_full.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp

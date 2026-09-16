@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_democratic_republic_tanayov.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/cy34c_anakonda.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "cy34c_anakonda"
+display_name = "Cy-34C Anakonda [AESA]"
+role = "Heavy Strike"
+nation = "Democratic Republic of Tanayov"
+description = "Cykovskiy Cy-34C Anakonda (Анаконда) — side-by-side heavy strike with V005AE AESA. Fitted with SPO-150M1.2 / L-150M1.2 ESM/EW. Carries the Deltaoboronprom LSS-3 High-Yield Strike Laser Pod (Лазерная система Standoff) on the starter map."
+category = "fixed_wing"
+manufacturer = "Cykovskiy"
+era = "Modern"
+tier = "Pro"
+potentiality_filled = 0
+potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely Su-34 Fullback AESA heavy-strike class"
+max_speed_kmh = 1900
+mach_max = 1.8
+combat_radius_km = 1100
+service_ceiling_m = 15000
+empty_weight_kg = 22500
+thrust_kn = 274.0
+hardpoints = 12
+crew = 2
+radar_range_m = 18500.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "cykovskiy_cy34"
+variant_code = "Cy-34C [AESA]"
+starter_weapons = PackedStringArray("2× R-73M", "2× R-77M", "2× S-8 Rocket Pods (dual-racked)", "2× Kh-29T", "1× Deltaoboronprom LSS-3 High-Yield Strike Laser Pod (Лазерная система Standoff)", "GSh-30-1 ×399")
+upgrade_modules = [{
+"desc": "V005AE AESA — long-look heavy-strike cueing for Cy-34C Anakonda.",
+"id": "radar_cy34c_v005ae",
+"locked": false,
+"name": "V005AE AESA",
+"slot": "Sensors"
+}, {
+"desc": "SPO-150M1.2 / L-150M1.2 ESM/EW — upgraded spectrum suite for deep strike packages.",
+"id": "ew_cy34c_spo150m12_l150m12",
+"locked": false,
+"name": "SPO-150M1.2 / L-150M1.2 ESM/EW",
+"slot": "EW"
+}, {
+"desc": "Deltaoboronprom (Delta Armory Industries) LSS-3 High-Yield Strike Laser Pod — Лазерная система Standoff.",
+"id": "pod_cy34c_lss3_laser",
+"locked": false,
+"name": "LSS-3 High-Yield Strike Laser Pod",
+"slot": "Weapons Bus"
+}, {
+"desc": "Starter A2A/A2G: 2× R-73M, 2× R-77M, 2× S-8 dual-rack pods, 2× Kh-29T.",
+"id": "wpn_cy34c_starter",
+"locked": false,
+"name": "Starter — R-73M / R-77M / S-8 / Kh-29T",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×399 rounds (Domini load).",
+"id": "gun_cy34c_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×399",
+"slot": "Gun"
+}]

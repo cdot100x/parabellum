@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/aircraft/joost_fj22_pijl.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_empire_nickel_territories.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/joost_fj22_pijl.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "joost_fj22_pijl"
+display_name = "Joost FJ-22 Pijl"
+role = "Interceptor / Point Defense"
+nation = "Empire of the Nickel Territories"
+description = "Joost arrow — Draken-bloodline interceptor for Nickel skies. Fast climb, sharp fangs, mid-high potentiality."
+era = "Modern"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+model_scene = ExtResource("2")
+irl_basis = "Placeholder — loosely J-35 Draken class"
+variant_code = "FJ-22"
+max_speed_kmh = 2125
+mach_max = 2.0
+combat_radius_km = 560
+service_ceiling_m = 20000
+empty_weight_kg = 7865
+thrust_kn = 78.0
+hardpoints = 6
+crew = 1
+upgrade_modules = [{
+"desc": "Joost point-defense AESA optimized for short-range scramble intercepts.",
+"id": "aesa_fj22_pijl_point",
+"locked": true,
+"name": "AESA — Pijl Point-Defense",
+"slot": "Sensors"
+}, {
+"desc": "Compact DIRCM turret for Nickel Territories quick-reaction FJ-22s.",
+"id": "dircm_fj22_arrow",
+"locked": true,
+"name": "DIRCM Arrowhead Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM tuned to border AEW and hostile fighter radars near Nickel airspace.",
+"id": "esm_fj22_border",
+"locked": true,
+"name": "ESM Border Watch",
+"slot": "EW"
+}, {
+"desc": "Fast-spool engine kit for cold-alert Pijl launches.",
+"id": "eng_fj22_scramble",
+"locked": true,
+"name": "Scramble Spool Kit",
+"slot": "Engine"
+}, {
+"desc": "FCS gain set for violent snap rolls in point-defense merges.",
+"id": "fcs_fj22_snap",
+"locked": true,
+"name": "Snap-Roll FCS Gain",
+"slot": "FCS"
+}, {
+"desc": "RWR overlay that shouts missile locks louder than the stock Joost box.",
+"id": "rwr_fj22_piercer",
+"locked": true,
+"name": "Piercer RWR Overlay",
+"slot": "RWR"
+}]

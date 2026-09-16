@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_new_akron_federation.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/lawrence_mh60_dap.png" id="3"]
+
+[ext_resource type="PackedScene" path="res://scenes/aircraft/lawrence_mh60_dap.tscn" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "lawrence_mh60_dap"
+display_name = "Lawrence MH-60 DAP"
+role = "Assault / Direct Action"
+nation = "New Akron Federation"
+description = "Lawrence (Sikorsky-line) door-gunner assault Blackhawk."
+category = "helicopter"
+manufacturer = "Lawrence"
+era = "Late Cold War"
+tier = "Rookie"
+potentiality_filled = 2
+potentiality_max = 5
+preview = ExtResource("3")
+card_image = ExtResource("3")
+flag = ExtResource("2")
+model_scene = ExtResource("4")
+irl_basis = "UH-60M Black Hawk"
+max_speed_kmh = 280
+mach_max = 0.0
+combat_radius_km = 580
+service_ceiling_m = 5800
+empty_weight_kg = 5800
+thrust_kn = 0.0
+hardpoints = 4
+crew = 4
+upgrade_modules = [{
+"desc": "Lawrence AESA for MH-60 DAP direct-action gunship work.",
+"id": "aesa_mh60_dap",
+"locked": true,
+"name": "AESA — DAP Attack Face",
+"slot": "Sensors"
+}, {
+"desc": "Dual DIRCM turrets for DAP assault profiles.",
+"id": "dircm_mh60_dap",
+"locked": true,
+"name": "DIRCM DAP Dual Turret",
+"slot": "Self-Protect"
+}, {
+"desc": "ESM suite for urban and mountain direct-action threats.",
+"id": "esm_mh60_dap",
+"locked": true,
+"name": "ESM Direct-Action Suite",
+"slot": "EW"
+}, {
+"desc": "Weapons bus syncing door guns and rocket pods on the DAP.",
+"id": "wpn_mh60_dap_guns",
+"locked": true,
+"name": "DAP Gun/Rocket Bus",
+"slot": "Weapons Bus"
+}, {
+"desc": "Cabin armor upscale for MH-60 DAP troop protection.",
+"id": "arm_mh60_dap",
+"locked": true,
+"name": "Assault Cabin Armor",
+"slot": "Armor"
+}, {
+"desc": "MAWS ring feeding auto-countermeasures on the DAP.",
+"id": "maws_mh60_dap",
+"locked": true,
+"name": "DAP MAWS Ring",
+"slot": "MAWS"
+}]

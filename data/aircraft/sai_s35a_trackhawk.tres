@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_federal_republic_valorterra.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/sai_s35a_trackhawk.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+id = "sai_s35a_trackhawk"
+display_name = "SAI S-35A Trackhawk (CTOL)"
+role = "Stealth Air Superiority / Strike"
+nation = "Federal Republic of Valorterra"
+description = "Spix Aerospace / SAI S-35A Trackhawk — Valorterran CTOL stealth. MR/TRS-82 AESA plus MR/TRS-82-SR side-cheek arrays, Roche Alert System (REAS), RWR/MWR/MAWS, and JUPITER EW/ESM. Conventional-takeoff land-based variant."
+category = "fixed_wing"
+manufacturer = "SAI / Spix Aerospace"
+era = "Apex"
+tier = "Apex"
+potentiality_filled = 0
+potentiality_max = 7
+preview = ExtResource("4")
+card_image = ExtResource("4")
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely FC-31 / J-35 CTOL stealth class"
+max_speed_kmh = 2300
+mach_max = 1.9
+combat_radius_km = 1300
+service_ceiling_m = 17000
+empty_weight_kg = 15500
+thrust_kn = 210.0
+hardpoints = 6
+crew = 1
+radar_range_m = 22000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "sai_stealth"
+variant_code = "S-35A [CTOL]"
+starter_weapons = PackedStringArray("2× RP-10X2 Angeleye (IR / IIR / ARH)", "2× RP-4D7 ARMS (ARH / IOG / DL / GNSS / EICCM — HOJ/RGPO)", "Prittkin O23 Whiplash Minigun ×671", "RP-220G JOSAW (Joint Offensive Standoff Airstrike Weapon)")
+upgrade_modules = [{
+"desc": "MR/TRS-82 nose AESA — LPI multimode for Trackhawk CTOL.",
+"id": "radar_s35a_mr_trs82",
+"locked": false,
+"name": "MR/TRS-82 AESA",
+"slot": "Sensors"
+}, {
+"desc": "MR/TRS-82-SR side-cheek arrays — wide-angle coverage without breaking the facet lines.",
+"id": "radar_s35a_mr_trs82_sr",
+"locked": false,
+"name": "MR/TRS-82-SR Side Cheeks",
+"slot": "Sensors"
+}, {
+"desc": "Roche Alert System (REAS) — fused RWR/MWR/MAWS threat picture.",
+"id": "reas_s35a_roche",
+"locked": false,
+"name": "Roche Alert System (REAS)",
+"slot": "Self-Protect"
+}, {
+"desc": "JUPITER EW/ESM suite — Valorterran spectrum war for contested CTOL packages.",
+"id": "ew_s35a_jupiter",
+"locked": false,
+"name": "JUPITER EW/ESM",
+"slot": "EW"
+}, {
+"desc": "Internal Prittkin O23 Whiplash minigun — ×671 rounds.",
+"id": "gun_s35a_prittkin_o23",
+"locked": false,
+"name": "Prittkin O23 Whiplash ×671",
+"slot": "Gun"
+}, {
+"desc": "Starter load: Angeleye, ARMS, and RP-220G JOSAW standoff.",
+"id": "wpn_s35a_starter",
+"locked": false,
+"name": "Starter — Angeleye / ARMS / JOSAW",
+"slot": "Weapons Bus"
+}]
