@@ -166,6 +166,22 @@
       renderNewsBrowse();
       return;
     }
+    if (hash === "heli" || hash === "rotary") {
+      section = "heli";
+      renderBrowse();
+      return;
+    }
+    if (hash === "special") {
+      section = "special";
+      renderBrowse();
+      return;
+    }
+    if (hash === "campaigns") {
+      section = "campaigns";
+      renderBrowse();
+      return;
+    }
+    section = "aircraft";
     renderBrowse();
   }
 
@@ -450,8 +466,12 @@
 
     function setZoom(next) {
       zoom = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, next));
-      dirty = true;
-      job = null;
+      // Zoom only changes blit size — do not kill the in-flight sphere job
+      // (clearing mid-paint was flashing blank / half-rendered frames).
+      const wanted = pickLayerSize(Math.min(canvas.width || 0, canvas.height || 0) * 0.34 * zoom * 2);
+      if (wanted !== (job?.size || sphereCanvas.width)) {
+        dirty = true;
+      }
     }
 
     function adjustZoom(delta) {
@@ -467,8 +487,10 @@
         data[i + 3] = 255;
         return;
       }
-      // Horizontal flip retained.
+      // Horizontal flip + slight horizontal stretch (continents read wider on sphere).
+      const MAP_H_STRETCH = 1.12;
       let uu = 1 - u;
+      uu = 0.5 + (uu - 0.5) / MAP_H_STRETCH;
       uu = ((uu % 1) + 1) % 1;
       const vv = Math.max(0, Math.min(1, v));
       const x = uu * (mapW - 1);
@@ -513,10 +535,8 @@
 
     function beginSphereJob(size) {
       if (!sphereCtx) return;
-      if (sphereCanvas.width !== size || sphereCanvas.height !== size) {
-        sphereCanvas.width = size;
-        sphereCanvas.height = size;
-      }
+      // Build into ImageData only — do not resize sphereCanvas here or the
+      // last good frame gets wiped and the globe flashes while chunking.
       const out = sphereCtx.createImageData(size, size);
       job = {
         size,
@@ -567,6 +587,10 @@
           return false;
         }
       }
+      if (sphereCanvas.width !== size || sphereCanvas.height !== size) {
+        sphereCanvas.width = size;
+        sphereCanvas.height = size;
+      }
       sphereCtx.putImageData(job.out, 0, 0);
       job = null;
       return true;
@@ -577,6 +601,10 @@
       let cap = CAP_IDLE;
       if (drag) cap = CAP_DRAG;
       else if (autoSpin) cap = CAP_SPIN;
+      // When zoomed in and idle, allow a denser layer so close-ups stay sharp.
+      if (!drag && !autoSpin && zoom > 1.15) {
+        cap = Math.min(srcW, Math.round(CAP_IDLE * Math.min(1.5, 0.75 + zoom * 0.4)));
+      }
       cap = Math.min(srcW, cap);
       let size = Math.ceil(Math.max(displayDiameter * 1.05, 640));
       size = Math.min(cap, Math.max(512, size));
@@ -1145,12 +1173,12 @@
           <ol>
             <li><a href="#sec-overview">Overview</a></li>
             ${missions.length ? "<li><a href='#sec-missions'>Mission chronology</a></li>" : ""}
-            <li><a href="#/">All campaigns</a></li>
+            <li><a href="#/campaigns">All campaigns</a></li>
           </ol>
         </nav>
 
         <div class="wiki-main">
-          <p class="wiki-kicker"><a class="wiki-link" href="#/">Campaigns</a></p>
+          <p class="wiki-kicker"><a class="wiki-link" href="#/campaigns">Campaigns</a></p>
           <h1 class="wiki-title">${esc(c.title)}</h1>
           <p class="wiki-subtitle">${esc(c.years || "")}</p>
 
@@ -1177,12 +1205,15 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function browseHashForSection(sec) {
+    if (sec === "heli") return "#/heli";
+    if (sec === "special") return "#/special";
+    if (sec === "campaigns") return "#/campaigns";
+    return "#/";
+  }
+
   function renderBrowse() {
     app.classList.remove("app--dossier", "app--wiki", "app--domini", "app--news");
-    const hash = location.hash.replace(/^#\/?/, "");
-    if (!hash && section !== "campaigns") {
-      section = "aircraft";
-    }
     setNavActive();
     if (section === "campaigns") {
       app.innerHTML = renderCampaignBrowse();
@@ -1232,8 +1263,7 @@
     const jump = app.querySelector("[data-jump-special]");
     if (jump) {
       jump.addEventListener("click", () => {
-        section = "special";
-        renderBrowse();
+        location.hash = "#/special";
       });
     }
     const jumpDomini = app.querySelector("[data-jump-domini]");
@@ -1245,9 +1275,7 @@
     const jumpCamp = app.querySelector("[data-jump-campaigns]");
     if (jumpCamp) {
       jumpCamp.addEventListener("click", () => {
-        section = "campaigns";
-        location.hash = "#/";
-        renderBrowse();
+        location.hash = "#/campaigns";
       });
     }
     const jumpNews = app.querySelector("[data-jump-news]");
@@ -1487,23 +1515,22 @@
 
   document.querySelectorAll(".nav-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-      section = btn.dataset.section || "aircraft";
-      if (section === "domini") {
+      const next = btn.dataset.section || "aircraft";
+      if (next === "domini") {
         location.hash = dominiHash("2d", selectedContinent || continents[0]?.id || "");
         return;
       }
-      if (section === "news") {
+      if (next === "news") {
         location.hash = "#/news";
         return;
       }
-      location.hash = "#/";
-      route();
+      location.hash = browseHashForSection(next);
     });
   });
 
   searchInput.addEventListener("input", () => {
     const hash = location.hash.replace(/^#\/?/, "");
-    if (!hash || hash === "/") {
+    if (!hash || hash === "/" || hash === "heli" || hash === "rotary" || hash === "special" || hash === "campaigns") {
       renderBrowse();
       return;
     }
