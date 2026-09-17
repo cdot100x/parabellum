@@ -6,12 +6,15 @@ import json
 import re
 import shutil
 import struct
+import subprocess
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TRES_DIR = ROOT / "data" / "aircraft"
 SITE = ROOT / "web" / "encyclopedia"
 OUT = SITE / "js" / "data.js"
+BUILD_JSON = SITE / "build.json"
 MEDIA = SITE / "media"
 MEDIA_CARDS = MEDIA / "cards"
 MEDIA_FLAGS = MEDIA / "flags"
@@ -458,7 +461,25 @@ def _copy_domini_map() -> tuple[bool, str, list[int]]:
         return True, f"raw-copy->{dw}x{dh}", [dw, dh]
 
 
+def _build_id() -> str:
+    """Unique per build so browsers cannot keep a stale data.js / card PNG."""
+    stamp = time.strftime("%Y%m%d%H%M%S", time.gmtime())
+    try:
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+        if sha:
+            return f"{sha}-{stamp}"
+    except Exception:  # noqa: BLE001
+        pass
+    return stamp
+
+
 def main() -> None:
+    build_id = _build_id()
     aircraft = []
     for path in sorted(TRES_DIR.glob("*.tres")):
         if path.name == "aircraft_data.gd":
@@ -474,6 +495,7 @@ def main() -> None:
         "title": "Parabellum Encyclopedia",
         "subtitle": "encyclopedia.parabellumuniverse.com",
         "site": "https://encyclopedia.parabellumuniverse.com",
+        "build_id": build_id,
         "air_eras": AIR_ERAS,
         "special_ids": SPECIAL_IDS,
         "heli_eras": HELI_ERAS,
@@ -494,9 +516,14 @@ def main() -> None:
         f"window.PB_ENCYCLOPEDIA = {body};\n",
         encoding="utf-8",
     )
+    BUILD_JSON.write_text(
+        json.dumps({"id": build_id}, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     n_continents = len(domini.get("continents") or [])
     print(
-        f"Wrote {OUT} ({len(aircraft)} airframes, {n_cards} cards, "
+        f"Wrote {OUT} + {BUILD_JSON.name} id={build_id} "
+        f"({len(aircraft)} airframes, {n_cards} cards, "
         f"{n_flags} flags, {len(campaigns)} campaigns, {n_campaign_art} campaign art, "
         f"{n_continents} continents, {n_domini_flags} domini flags, "
         f"{len(news)} news posts, {n_news_art} news art, "

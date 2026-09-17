@@ -17,6 +17,7 @@
   const continentById = Object.fromEntries(continents.map((c) => [c.id, c]));
   const newsPosts = Array.isArray(DATA.news) ? DATA.news : [];
   const newsById = Object.fromEntries(newsPosts.map((p) => [p.id, p]));
+  const BUILD_ID = String(DATA.build_id || "");
   const NEWS_CATEGORIES = [
     { id: "all", label: "All" },
     { id: "event", label: "Event" },
@@ -37,6 +38,19 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  /** Bust cached PNGs/flags after each encyclopedia deploy. */
+  function assetUrl(path) {
+    const raw = String(path || "").trim();
+    if (!raw || !BUILD_ID) return raw;
+    const sep = raw.includes("?") ? "&" : "?";
+    return `${raw}${sep}v=${encodeURIComponent(BUILD_ID)}`;
+  }
+
+  function bgUrl(path) {
+    const u = assetUrl(path);
+    return u ? ` style="background-image:url('${esc(u)}')"` : "";
   }
 
   /** First paragraph = brief; remaining blocks under Overview. */
@@ -213,15 +227,15 @@
   }
 
   function cardHtml(a, delay) {
-    const art = a.card || "";
-    const flag = a.flag || "";
+    const art = assetUrl(a.card || "");
+    const flag = assetUrl(a.flag || "");
     const badge = a.future_update
       ? '<span class="badge">Future Update</span>'
       : "";
     return `
       <a class="air-card" href="#/aircraft/${esc(a.id)}" style="animation-delay:${delay}s">
         ${badge}
-        <div class="air-card-art" style="background-image:url('${esc(art)}')"></div>
+        <div class="air-card-art"${art ? ` style="background-image:url('${esc(art)}')"` : ""}></div>
         <div class="air-card-body">
           <div class="air-card-row">
             ${flag ? `<img class="flag" src="${esc(flag)}" alt="" />` : ""}
@@ -304,7 +318,7 @@
           .map(
             (c) => `
           <li class="domini-country">
-            ${c.flag ? `<span class="domini-country-flag"><img class="flag" src="${esc(c.flag)}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="domini-country-code">${esc(c.short || "—")}</span>`}
+            ${c.flag ? `<span class="domini-country-flag"><img class="flag" src="${esc(assetUrl(c.flag))}" alt="" loading="lazy" decoding="async" /></span>` : `<span class="domini-country-code">${esc(c.short || "—")}</span>`}
             <div class="domini-country-copy">
               <strong>${esc(c.title)}</strong>
               <span class="domini-country-meta">${esc(c.short || "")}${c.faction ? ` · ${esc(c.faction)}` : ""}</span>
@@ -416,8 +430,9 @@
     const ZOOM_MIN = 0.55;
     const ZOOM_MAX = 2.75;
     const OCEAN = [0xc5, 0x82, 0x9b, 255];
-    const mapPath =
-      (domini && domini.globe_map) || "media/domini/domini_map_wip.png";
+    const mapPath = assetUrl(
+      (domini && domini.globe_map) || "media/domini/domini_map_wip.png"
+    );
 
     let mapPixels = null;
     let mapW = 0;
@@ -983,7 +998,7 @@
     const cat = String(p.category || "news").toLowerCase();
     return `
       <a class="news-card" href="#/news/post/${esc(p.id)}" style="animation-delay:${delay}s">
-        <div class="news-card-art"${p.art ? ` style="background-image:url('${esc(p.art)}')"` : ""}>
+        <div class="news-card-art"${p.art ? ` style="background-image:url('${esc(assetUrl(p.art))}')"` : ""}>
           ${p.art ? "" : `<span class="news-card-fallback">${esc(newsCategoryLabel(cat))}</span>`}
         </div>
         <div class="news-card-meta">
@@ -1068,7 +1083,7 @@
             <h1>${esc(p.title || "Untitled")}</h1>
             ${p.excerpt ? `<p class="news-article-deck">${esc(p.excerpt)}</p>` : ""}
           </header>
-          ${p.art ? `<div class="news-article-art" style="background-image:url('${esc(p.art)}')"></div>` : ""}
+          ${p.art ? `<div class="news-article-art" style="background-image:url('${esc(assetUrl(p.art))}')"></div>` : ""}
           <div class="news-article-body">${newsBodyHtml(p.body)}</div>
           <footer class="news-article-foot">
             <a class="btn" href="#/news">← All news</a>
@@ -1192,7 +1207,7 @@
 
         <aside class="wiki-infobox">
           <h2 class="wiki-infobox-title">${esc(c.title)}</h2>
-          ${c.art ? `<img class="wiki-infobox-img" src="${esc(c.art)}" alt="" />` : ""}
+          ${c.art ? `<img class="wiki-infobox-img" src="${esc(assetUrl(c.art))}" alt="" />` : ""}
           <table class="wiki-infobox-table">
             <tr><th>Date</th><td>${esc(c.years || "—")}</td></tr>
             <tr><th>Status</th><td>${esc(campaignStatus(c))}</td></tr>
@@ -1225,7 +1240,7 @@
     }
 
     const featured = byId[heroArtId()];
-    const art = featured?.card || "";
+    const art = assetUrl(featured?.card || "");
     let body = "";
     if (section === "aircraft") body = eraBlocks(DATA.air_eras || []);
     else if (section === "heli") body = eraBlocks(DATA.heli_eras || []);
@@ -1245,7 +1260,7 @@
 
     app.innerHTML = `
       <section class="hero">
-        <div class="hero-art" style="background-image:url('${esc(art)}')"></div>
+        <div class="hero-art"${art ? ` style="background-image:url('${esc(art)}')"` : ""}></div>
         <p class="hero-kicker">encyclopedia.parabellumuniverse.com</p>
         <h1>PARABELLUM</h1>
         <p class="hero-lead">Aircraft encyclopedia — designations, operators, and Airbook stats for every Domini airframe.</p>
@@ -1317,8 +1332,9 @@
   }
 
   function nationChip(nation, flag) {
-    if (flag) {
-      return `<span class="stat-operator"><img class="flag flag--tile" src="${esc(flag)}" alt="" /><span>${esc(nation || "—")}</span></span>`;
+    const flagSrc = assetUrl(flag || "");
+    if (flagSrc) {
+      return `<span class="stat-operator"><img class="flag flag--tile" src="${esc(flagSrc)}" alt="" /><span>${esc(nation || "—")}</span></span>`;
     }
     return `<span class="stat-operator"><span>${esc(nation || "—")}</span></span>`;
   }
@@ -1372,9 +1388,9 @@
               const active = s.id === currentId ? " is-active" : "";
               return `
             <a class="variant-card${active}" href="#/aircraft/${esc(s.id)}">
-              <div class="variant-card-art" style="background-image:url('${esc(s.card || "")}')"></div>
+              <div class="variant-card-art"${bgUrl(s.card || "")}></div>
               <div class="variant-card-meta">
-                ${s.flag ? `<img class="flag" src="${esc(s.flag)}" alt="" />` : ""}
+                ${s.flag ? `<img class="flag" src="${esc(assetUrl(s.flag))}" alt="" />` : ""}
                 <span>${esc(designation(s))}</span>
               </div>
             </a>`;
@@ -1461,8 +1477,8 @@
 
         <div class="dossier-main">
           <header class="dossier-banner">
-            <div class="dossier-banner-bg" style="background-image:url('${esc(a.card || "")}')"></div>
-            ${a.flag ? `<div class="dossier-banner-wash" style="background-image:url('${esc(a.flag)}')"></div>` : ""}
+            <div class="dossier-banner-bg"${bgUrl(a.card || "")}></div>
+            ${a.flag ? `<div class="dossier-banner-wash"${bgUrl(a.flag)}></div>` : ""}
             <div class="dossier-banner-grid">
               <div class="dossier-banner-copy">
                 <p class="dossier-kicker">${esc(categoryLabel(a))}</p>
@@ -1474,7 +1490,7 @@
                 </div>
               </div>
               <div class="dossier-banner-visual" aria-hidden="true">
-                <div class="dossier-banner-plane" style="background-image:url('${esc(a.card || "")}')"></div>
+                <div class="dossier-banner-plane"${bgUrl(a.card || "")}></div>
               </div>
               <div class="dossier-stat-grid">${tiles}</div>
             </div>
