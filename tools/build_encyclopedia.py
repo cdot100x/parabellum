@@ -295,8 +295,15 @@ def _copy_media(aircraft: list[dict]) -> tuple[int, int]:
     cards = flags = 0
     for a in aircraft:
         src = a.pop("_card_src", None)
+        card_name = Path(str(a.get("card", ""))).name or f"{a.get('id', 'card')}.png"
+        dest_card = MEDIA_CARDS / card_name
         if isinstance(src, Path) and src.is_file():
-            shutil.copy2(src, MEDIA_CARDS / src.name)
+            shutil.copy2(src, dest_card)
+            a["card"] = f"media/cards/{card_name}"
+            cards += 1
+        elif dest_card.is_file():
+            # Keep previously published card art if source asset is missing on this branch.
+            a["card"] = f"media/cards/{card_name}"
             cards += 1
         elif isinstance(src, Path):
             a["card"] = ""

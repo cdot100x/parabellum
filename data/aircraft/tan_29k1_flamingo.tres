@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="AircraftData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="AircraftData" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
 [ext_resource type="Texture2D" path="res://assets/nations/flag_united_calpurnia_states.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/aircraft_cards/tan_29k1_flamingo.png" id="4"]
 
 [resource]
 script = ExtResource("1")
@@ -16,6 +17,8 @@ era = "Modern"
 tier = "2003.23"
 potentiality_filled = 0
 potentiality_max = 6
+preview = ExtResource("4")
+card_image = ExtResource("4")
 flag = ExtResource("3")
 irl_basis = "Placeholder — loosely MiG-29K / Fulcrum-D naval STOL class"
 max_speed_kmh = 2200
