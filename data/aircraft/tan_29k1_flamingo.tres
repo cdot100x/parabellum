@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="AircraftData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/aircraft/aircraft_data.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/nations/flag_united_calpurnia_states.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+id = "tan_29k1_flamingo"
+display_name = "TaN-29K1 Flamingo"
+role = "STOL Multirole Fighter"
+nation = "United Calpurnia States"
+description = "Tanayov-andrei-Nakur TaN-29K1 Flamingo — Calpurnian STOL multirole. Stock airframe with unique avionics, cockpit, and upgrade path. Flown by VFA-102 \"Disciples.\" Fitted with N010AE Zhuk-AE AESA. Starter fangs: 2× R-73E, 2× R-77C2, and GSh-30-1 ×230."
+category = "fixed_wing"
+manufacturer = "Tanayov-andrei-Nakur"
+era = "Modern"
+tier = "2003.23"
+potentiality_filled = 0
+potentiality_max = 6
+flag = ExtResource("3")
+irl_basis = "Placeholder — loosely MiG-29K / Fulcrum-D naval STOL class"
+max_speed_kmh = 2200
+mach_max = 2.0
+combat_radius_km = 950
+service_ceiling_m = 17500
+empty_weight_kg = 12700
+thrust_kn = 176.0
+hardpoints = 8
+crew = 1
+radar_range_m = 14000.0
+has_rwr = true
+has_maws = true
+future_update = true
+lineage_family = "tan_29"
+variant_code = "TaN-29K1"
+starter_weapons = PackedStringArray("2× R-73E", "2× R-77C2", "GSh-30-1 ×230")
+upgrade_modules = [{
+"desc": "N010AE Zhuk-AE AESA — Calpurnian lookdown and multirole cueing for Flamingo.",
+"id": "radar_tan29k1_n010ae_zhuk_ae",
+"locked": false,
+"name": "N010AE Zhuk-AE AESA",
+"slot": "Sensors"
+}, {
+"desc": "Starter A2A: 2× R-73E high-off-boresight IR on the TaN-29K1 hardpoint map.",
+"id": "wpn_tan29k1_r73e",
+"locked": false,
+"name": "Starter — 2× R-73E",
+"slot": "Weapons Bus"
+}, {
+"desc": "Starter A2A: 2× R-77C2 active radar medium-range on the TaN-29K1 hardpoint map.",
+"id": "wpn_tan29k1_r77c2",
+"locked": false,
+"name": "Starter — 2× R-77C2",
+"slot": "Weapons Bus"
+}, {
+"desc": "Internal Gryazev-Shipunov GSh-30-1 30 mm cannon — ×230 rounds (Calpurnian stock load).",
+"id": "gun_tan29k1_gsh301",
+"locked": false,
+"name": "GSh-30-1 ×230",
+"slot": "Gun"
+}, {
+"desc": "Flamingo LAD / unique glass — locked until the Disciples cockpit pack ships.",
+"id": "avionics_tan29k1_lad_glass",
+"locked": true,
+"name": "LAD Glass Pack",
+"slot": "Avionics"
+}, {
+"desc": "STOL approach / flap schedule kit for short-deck and austere strips.",
+"id": "fcs_tan29k1_stol",
+"locked": true,
+"name": "STOL Approach Kit",
+"slot": "Flight Controls"
+}]

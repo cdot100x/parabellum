@@ -60,6 +60,7 @@ AIR_ERAS = [
             "cy33ib_byelka",
             "cy34c_anakonda",
             "cy27_tema3",
+            "tan_29k1_flamingo",
         ],
     },
     {

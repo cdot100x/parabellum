@@ -51,6 +51,14 @@
           "faction": "BLIC",
           "flag": "flag_democratic_republic_tanayov.png",
           "desc": "North Akron heavyweight. Su-27/30/35/47 family operator — O-80 Devil's Tower and Harpyeagle programs."
+        },
+        {
+          "id": "calpurnia",
+          "title": "United Calpurnia States",
+          "short": "UCS",
+          "faction": "IEF",
+          "flag": "flag_united_calpurnia_states.png",
+          "desc": "North Akron naval STOL power. Operates the TaN-29K1 Flamingo with VFA-102 Disciples carrier packages."
         }
       ],
       "timeline": [
